@@ -36,9 +36,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold text-white">
-            <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">
-              Guilherme Beloni
-            </span>
+            <span className="text-slate-100 bg-clip-text">GB</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -50,7 +48,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
                 className="text-gray-300 hover:text-white transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-green-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-green-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>

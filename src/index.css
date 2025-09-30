@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 /* Animações personalizadas */
 @keyframes fade-in-up {
@@ -102,6 +103,11 @@
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Fonte padrão Roboto */
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Efeitos de hover para links */

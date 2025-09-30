@@ -80,3 +80,4 @@ npm install resend
 
 - **Resend Docs**: [https://resend.com/docs](https://resend.com/docs)
 - **NPM Package**: [https://www.npmjs.com/package/resend](https://www.npmjs.com/package/resend)
+

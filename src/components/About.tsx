@@ -22,12 +22,12 @@ const About = () => {
   }, []);
 
   const skills = [
-    { name: "React", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "Node.js", level: 80 },
-    { name: "Python", level: 75 },
-    { name: "Tailwind CSS", level: 95 },
-    { name: "JavaScript", level: 90 },
+    { name: "React", level: 70 },
+    { name: "TypeScript", level: 65 },
+    { name: "Node.js", level: 50 },
+    { name: "Python", level: 25 },
+    { name: "Tailwind CSS", level: 46 },
+    { name: "JavaScript", level: 91.5 },
   ];
 
   return (
@@ -55,14 +55,14 @@ const About = () => {
             {/* Informações pessoais */}
             <div className="space-y-6">
               <div className="bg-gray-700/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-600/50">
-                <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-green-600 rounded-full flex items-center justify-center text-4xl font-bold text-white">
+                <div className="w-30 h-30 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-green-600 rounded-full flex items-center justify-center text-4xl font-bold text-white">
                   GB
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4">
                   Guilherme Beloni
                 </h3>
                 <p className="text-gray-300 text-center leading-relaxed">
-                  Desenvolvedor Full Stack com mais de 3 anos de experiência
+                  Desenvolvedor Full Stack com mais de 5 anos de experiência
                   criando aplicações web modernas e responsivas. Especializado
                   em React, React Native, TypeScript e Node.js, sempre buscando
                   as melhores práticas e tecnologias mais recentes.
@@ -71,7 +71,7 @@ const About = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-700/30 p-4 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-400">3+</div>
+                  <div className="text-2xl font-bold text-blue-400">5+</div>
                   <div className="text-sm text-gray-400">
                     Anos de Experiência
                   </div>

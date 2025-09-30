@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -9,6 +10,13 @@ const Hero = () => {
         const scrolled = window.pageYOffset;
         const parallax = scrolled * 0.5;
         heroRef.current.style.transform = `translateY(${parallax}px)`;
+      }
+      
+      // Ocultar scroll indicator quando o usuário fizer scroll
+      if (window.pageYOffset > 50) {
+        setShowScrollIndicator(false);
+      } else {
+        setShowScrollIndicator(true);
       }
     };
 
@@ -69,8 +77,10 @@ const Hero = () => {
         <div className="absolute top-1/8 right-1/8 w-40 h-40 bg-slate-500/20 rounded-full blur-xl animate-pulse delay-2000"></div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute hidden-sm bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Scroll indicator - apenas para desktop */}
+      <div className={`absolute hidden md:block bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
+        showScrollIndicator ? 'opacity-100 animate-bounce' : 'opacity-0'
+      }`}>
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>

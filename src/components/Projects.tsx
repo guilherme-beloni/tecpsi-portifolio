@@ -18,35 +18,24 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      id: 1,
-      title: "E-commerce Platform",
-      description:
-        "Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-    },
-    {
       id: 2,
-      title: "Task Management App",
+      title: "Saddles - E-commerce Platform",
       description:
-        "Aplicação de gerenciamento de tarefas com drag-and-drop, notificações em tempo real e colaboração em equipe.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
-      liveUrl: "#",
+        "Plataforma de e-commerce moderna com carrinho de compras, sistema de pagamentos e painel administrativo completo.",
+      image: "/p1.jpg",
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+      liveUrl: "https://saddles.vercel.app",
       githubUrl: "#",
       featured: true,
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "Job Beta - Rust Platform",
       description:
-        "Dashboard meteorológico com previsões em tempo real, mapas interativos e alertas personalizados.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API"],
-      liveUrl: "#",
+        "Plataforma de vagas de emprego desenvolvida em Rust com interface moderna e sistema de busca avançada.",
+      image: "/p2.jpg",
+      technologies: ["Rust", "React", "TypeScript", "PostgreSQL"],
+      liveUrl: "https://job-beta-rust.vercel.app",
       githubUrl: "#",
       featured: false,
     },
@@ -102,6 +91,20 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Bloquear scroll quando modal estiver aberto
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup: restaurar scroll quando componente desmontar
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedProject]);
+
   return (
     <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
@@ -113,7 +116,7 @@ const Projects = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">
+              <span className="text-slate-300 bg-clip-text ">
                 Meus Projetos
               </span>
             </h2>
@@ -136,9 +139,26 @@ const Projects = () => {
               >
                 {/* Imagem do projeto */}
                 <div className="relative overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-green-500/20 flex items-center justify-center">
-                    <div className="text-6xl opacity-50">🚀</div>
-                  </div>
+                  {project.image && project.image !== "/api/placeholder/600/400" ? (
+                    <div className="relative w-full h-64 overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  ) : (
+                    <div className="w-full h-64 bg-gray-700/50 animate-pulse overflow-hidden">
+                      {/* Skeleton para imagem */}
+                      <div className="w-full h-full bg-gradient-to-br from-gray-600/30 to-gray-700/30 relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+                        <div className="absolute top-4 left-4 w-8 h-8 bg-gray-600/50 rounded-full animate-pulse"></div>
+                        <div className="absolute bottom-4 right-4 w-12 h-3 bg-gray-600/50 rounded animate-pulse"></div>
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-4 bg-gray-600/50 rounded animate-pulse"></div>
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                   {/* Overlay com botões */}
@@ -164,53 +184,91 @@ const Projects = () => {
 
                 {/* Conteúdo do card */}
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    {project.featured && (
-                      <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-semibold rounded-full">
-                        Destaque
-                      </span>
-                    )}
-                  </div>
+                  {project.image && project.image !== "/api/placeholder/600/400" ? (
+                    <>
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                          {project.title}
+                        </h3>
+                        {project.featured && (
+                          <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-semibold rounded-full">
+                            Destaque
+                          </span>
+                        )}
+                      </div>
 
-                  <p className="text-gray-400 mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
+                      <p className="text-gray-400 mb-4 line-clamp-2">
+                        {project.description}
+                      </p>
 
-                  {/* Tecnologias */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full hover:bg-blue-500/20 hover:text-blue-400 transition-colors duration-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                      {/* Tecnologias */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full hover:bg-blue-500/20 hover:text-blue-400 transition-colors duration-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {/* Skeleton para título */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="h-6 bg-gray-700/50 rounded animate-pulse w-3/4"></div>
+                        <div className="h-5 bg-gray-700/50 rounded-full animate-pulse w-16"></div>
+                      </div>
+
+                      {/* Skeleton para descrição */}
+                      <div className="space-y-2 mb-4">
+                        <div className="h-4 bg-gray-700/50 rounded animate-pulse w-full"></div>
+                        <div className="h-4 bg-gray-700/50 rounded animate-pulse w-5/6"></div>
+                        <div className="h-4 bg-gray-700/50 rounded animate-pulse w-4/6"></div>
+                      </div>
+
+                      {/* Skeleton para tecnologias */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <div className="h-6 bg-gray-700/50 rounded-full animate-pulse w-16"></div>
+                        <div className="h-6 bg-gray-700/50 rounded-full animate-pulse w-20"></div>
+                        <div className="h-6 bg-gray-700/50 rounded-full animate-pulse w-14"></div>
+                        <div className="h-6 bg-gray-700/50 rounded-full animate-pulse w-18"></div>
+                      </div>
+                    </>
+                  )}
 
                   {/* Links */}
                   <div className="flex space-x-4">
-                    <a
-                      href={project.liveUrl}
-                      className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center space-x-1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span>🌐</span>
-                      <span className="text-sm">Live Demo</span>
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span>📁</span>
-                      <span className="text-sm">Código</span>
-                    </a>
+                    {project.image && project.image !== "/api/placeholder/600/400" ? (
+                      <>
+                        <a
+                          href={project.liveUrl}
+                          className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center space-x-1"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span>🌐</span>
+                          <span className="text-sm">Live Demo</span>
+                        </a>
+                        <a
+                          href={project.githubUrl}
+                          className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-1"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                          </svg>
+                          <span className="text-sm">Código</span>
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <div className="h-4 bg-gray-700/50 rounded animate-pulse w-20"></div>
+                        <div className="h-4 bg-gray-700/50 rounded animate-pulse w-16"></div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -222,7 +280,7 @@ const Projects = () => {
       {/* Modal de detalhes do projeto */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gray-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-gray-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-2xl font-bold text-white">
@@ -236,8 +294,18 @@ const Projects = () => {
                 </button>
               </div>
 
-              <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-6xl opacity-50">🚀</div>
+              <div className="w-full h-80 rounded-lg mb-6 overflow-hidden">
+                {selectedProject.image && selectedProject.image !== "/api/placeholder/600/400" ? (
+                  <img 
+                    src={selectedProject.image} 
+                    alt={selectedProject.title}
+                    className="w-full h-full object-cover object-center"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                    <div className="text-6xl opacity-50">🚀</div>
+                  </div>
+                )}
               </div>
 
               <p className="text-gray-300 mb-6">

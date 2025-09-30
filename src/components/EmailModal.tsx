@@ -20,8 +20,6 @@ const EmailModal = ({ isOpen, onClose, status, message }: EmailModalProps) => {
     }
   }, [isOpen])
 
-  console.log('🎭 EmailModal render:', { isOpen, status, message })
-
   if (!isOpen) return null
 
   const isSuccess = status === 'success'
