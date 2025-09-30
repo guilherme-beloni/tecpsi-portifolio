@@ -1,43 +1,44 @@
-import { useEffect, useRef, useState } from 'react'
-import { useContactForm } from '../hooks/useContactForm'
+import { useEffect, useRef, useState } from "react";
+import { useContactForm } from "../hooks/useContactForm";
+import EmailModal from "./EmailModal";
 
 const Contact = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  const contactRef = useRef<HTMLDivElement>(null)
-  const { formData, formState, handleInputChange, handleSubmit } = useContactForm()
+  const [isVisible, setIsVisible] = useState(false);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const { formData, formState, handleInputChange, handleSubmit, closeModal } =
+    useContactForm();
 
   const socialLinks = [
-    { name: 'GitHub', icon: '🐙', url: 'https://github.com' },
-    { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com' },
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com' },
-    { name: 'Email', icon: '📧', url: 'mailto:contato@exemplo.com' }
-  ]
+    { name: "GitHub", icon: "🐙", url: "https://github.com" },
+    { name: "LinkedIn", icon: "💼", url: "https://linkedin.com" },
+    { name: "Twitter", icon: "🐦", url: "https://twitter.com" },
+    { name: "Email", icon: "📧", url: "mailto:contato@exemplo.com" },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
       { threshold: 0.3 }
-    )
+    );
 
     if (contactRef.current) {
-      observer.observe(contactRef.current)
+      observer.observe(contactRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
-
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="contact" className="py-20 bg-gray-800/50">
       <div className="container mx-auto px-6">
-        <div 
+        <div
           ref={contactRef}
           className={`max-w-6xl mx-auto transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <div className="text-center mb-16">
@@ -47,7 +48,8 @@ const Contact = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Vamos trabalhar juntos! Entre em contato para discutir seu próximo projeto
+              Vamos trabalhar juntos! Entre em contato para discutir seu próximo
+              projeto
             </p>
           </div>
 
@@ -55,17 +57,21 @@ const Contact = () => {
             {/* Informações de contato */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-white">Vamos conversar!</h3>
+                <h3 className="text-2xl font-bold mb-6 text-white">
+                  Vamos conversar!
+                </h3>
                 <p className="text-gray-300 leading-relaxed mb-8">
-                  Estou sempre interessado em novos projetos e oportunidades. 
-                  Se você tem uma ideia ou precisa de ajuda com desenvolvimento, 
+                  Estou sempre interessado em novos projetos e oportunidades. Se
+                  você tem uma ideia ou precisa de ajuda com desenvolvimento,
                   não hesite em entrar em contato!
                 </p>
               </div>
 
               {/* Links sociais */}
               <div>
-                <h4 className="text-lg font-semibold mb-4 text-white">Conecte-se comigo</h4>
+                <h4 className="text-lg font-semibold mb-4 text-white">
+                  Conecte-se comigo
+                </h4>
                 <div className="grid grid-cols-2 gap-4">
                   {socialLinks.map((social) => (
                     <a
@@ -88,7 +94,9 @@ const Contact = () => {
 
               {/* Informações adicionais */}
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
-                <h4 className="text-lg font-semibold mb-3 text-blue-400">Informações</h4>
+                <h4 className="text-lg font-semibold mb-3 text-blue-400">
+                  Informações
+                </h4>
                 <div className="space-y-2 text-gray-300">
                   <p>📍 São Paulo, Brasil</p>
                   <p>⏰ Disponível para projetos</p>
@@ -99,26 +107,12 @@ const Contact = () => {
 
             {/* Formulário de contato */}
             <div className="bg-gray-700/30 backdrop-blur-sm p-8 rounded-2xl border border-gray-600/50">
-              {/* Feedback de status */}
-              {formState.message && (
-                <div className={`mb-6 p-4 rounded-lg ${
-                  formState.isSuccess 
-                    ? 'bg-green-500/20 border border-green-500/50 text-green-400' 
-                    : formState.isError 
-                    ? 'bg-red-500/20 border border-red-500/50 text-red-400'
-                    : 'bg-blue-500/20 border border-blue-500/50 text-blue-400'
-                }`}>
-                  <div className="flex items-center space-x-2">
-                    {formState.isSuccess && <span>✅</span>}
-                    {formState.isError && <span>❌</span>}
-                    <span>{formState.message}</span>
-                  </div>
-                </div>
-              )}
-
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Nome
                   </label>
                   <input
@@ -134,7 +128,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Email
                   </label>
                   <input
@@ -150,7 +147,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Mensagem
                   </label>
                   <textarea
@@ -176,7 +176,7 @@ const Contact = () => {
                       <span>Enviando...</span>
                     </span>
                   ) : (
-                    'Enviar Mensagem'
+                    "Enviar Mensagem"
                   )}
                 </button>
               </form>
@@ -184,8 +184,17 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  )
-}
 
-export default Contact
+      {/* Modal de confirmação */}
+
+      <EmailModal
+        isOpen={formState.showModal}
+        onClose={closeModal}
+        status={formState.modalStatus}
+        message={formState.message}
+      />
+    </section>
+  );
+};
+
+export default Contact;

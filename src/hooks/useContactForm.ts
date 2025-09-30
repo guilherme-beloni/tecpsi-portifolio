@@ -13,6 +13,8 @@ export interface ContactFormState {
   isSuccess: boolean
   isError: boolean
   message: string
+  showModal: boolean
+  modalStatus: 'success' | 'error' | null
 }
 
 export const useContactForm = () => {
@@ -26,7 +28,9 @@ export const useContactForm = () => {
     isSubmitting: false,
     isSuccess: false,
     isError: false,
-    message: ''
+    message: '',
+    showModal: false,
+    modalStatus: null
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -47,8 +51,18 @@ export const useContactForm = () => {
       isSubmitting: false,
       isSuccess: false,
       isError: false,
-      message: ''
+      message: '',
+      showModal: false,
+      modalStatus: null
     })
+  }
+
+  const closeModal = () => {
+    setFormState(prev => ({
+      ...prev,
+      showModal: false,
+      modalStatus: null
+    }))
   }
 
   const validateForm = (): boolean => {
@@ -57,7 +71,9 @@ export const useContactForm = () => {
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        message: 'Por favor, insira seu nome.'
+        message: 'Por favor, insira seu nome.',
+        showModal: false,
+        modalStatus: null
       })
       return false
     }
@@ -67,7 +83,9 @@ export const useContactForm = () => {
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        message: 'Por favor, insira seu email.'
+        message: 'Por favor, insira seu email.',
+        showModal: false,
+        modalStatus: null
       })
       return false
     }
@@ -78,7 +96,9 @@ export const useContactForm = () => {
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        message: 'Por favor, insira um email válido.'
+        message: 'Por favor, insira um email válido.',
+        showModal: false,
+        modalStatus: null
       })
       return false
     }
@@ -88,7 +108,9 @@ export const useContactForm = () => {
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        message: 'Por favor, insira sua mensagem.'
+        message: 'Por favor, insira sua mensagem.',
+        showModal: false,
+        modalStatus: null
       })
       return false
     }
@@ -98,7 +120,9 @@ export const useContactForm = () => {
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        message: 'A mensagem deve ter pelo menos 10 caracteres.'
+        message: 'A mensagem deve ter pelo menos 10 caracteres.',
+        showModal: false,
+        modalStatus: null
       })
       return false
     }
@@ -113,7 +137,9 @@ export const useContactForm = () => {
       isSubmitting: true,
       isSuccess: false,
       isError: false,
-      message: ''
+      message: '',
+      showModal: false,
+      modalStatus: null
     })
 
     if (!validateForm()) {
@@ -135,15 +161,24 @@ export const useContactForm = () => {
           isSubmitting: false,
           isSuccess: true,
           isError: false,
-          message: result.message
+          message: result.message,
+          showModal: true,
+          modalStatus: 'success'
         })
-        resetForm()
+        // Resetar apenas os dados do formulário, não o estado do modal
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        })
       } else {
         setFormState({
           isSubmitting: false,
           isSuccess: false,
           isError: true,
-          message: result.message
+          message: result.message,
+          showModal: true,
+          modalStatus: 'error'
         })
       }
     } catch (error) {
@@ -152,7 +187,9 @@ export const useContactForm = () => {
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        message: 'Erro inesperado. Tente novamente mais tarde.'
+        message: 'Erro inesperado. Tente novamente mais tarde.',
+        showModal: true,
+        modalStatus: 'error'
       })
     }
   }
@@ -162,6 +199,7 @@ export const useContactForm = () => {
     formState,
     handleInputChange,
     handleSubmit,
-    resetForm
+    resetForm,
+    closeModal
   }
 }
