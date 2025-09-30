@@ -43,12 +43,16 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-slate-300 bg-clip-text ">Sobre</span>
             </h2>
-           
+
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
-              Sou especialista em desenvolvimento full stack com foco em entregar soluções digitais robustas, escaláveis e alinhadas aos objetivos estratégicos de cada cliente.
+              Sou especialista em desenvolvimento full stack com foco em
+              entregar soluções digitais robustas, escaláveis e alinhadas aos
+              objetivos estratégicos de cada cliente.
             </p>
             <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Com mais de 3 anos de atuação, ajudamos empresas a transformar ideias em produtos digitais de alto impacto — da interface ao backend, da prototipação ao deploy.
+              Com mais de 5 anos de atuação, ajudamos empresas a transformar
+              ideias em produtos digitais de alto impacto — da interface ao
+              backend, da prototipação ao deploy.
             </p>
           </div>
 
@@ -66,7 +70,12 @@ const About = () => {
                   Tech Lead & Full Stack Developer
                 </p>
                 <p className="text-gray-300 text-center leading-relaxed">
-                  Atuo liderando e executando projetos de alto nível com foco em performance, usabilidade e escalabilidade. Trabalho com tecnologias modernas como React, TypeScript, Node.js e infraestrutura em nuvem. Tenho visão de negócio, responsabilidade técnica e compromisso com entregas de excelência.
+                  Atuo liderando e executando projetos de alto nível com foco em
+                  performance, usabilidade e escalabilidade. Trabalho com
+                  tecnologias modernas como React, TypeScript, Node.js e
+                  infraestrutura em nuvem. Tenho visão de negócio,
+                  responsabilidade técnica e compromisso com entregas de
+                  excelência.
                 </p>
               </div>
 
@@ -76,7 +85,7 @@ const About = () => {
                 </h4>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-gray-700/30 p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold text-blue-400">3+</div>
+                    <div className="text-2xl font-bold text-blue-400">5+</div>
                     <div className="text-sm text-gray-400">
                       anos de atuação no mercado
                     </div>
@@ -88,7 +97,9 @@ const About = () => {
                     </div>
                   </div>
                   <div className="bg-gray-700/30 p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold text-purple-400">100%</div>
+                    <div className="text-2xl font-bold text-purple-400">
+                      100%
+                    </div>
                     <div className="text-sm text-gray-400">
                       de feedbacks positivos
                     </div>
@@ -99,8 +110,12 @@ const About = () => {
 
             {/* Habilidades */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-6">Tecnologias & Especialidades</h3>
-              <h4 className="text-xl font-semibold mb-4 text-blue-400">Stack Principal</h4>
+              <h3 className="text-2xl font-bold mb-6">
+                Tecnologias & Especialidades
+              </h3>
+              <h4 className="text-xl font-semibold mb-4 text-blue-400">
+                Stack Principal
+              </h4>
               <div className="space-y-4">
                 {skills.map((skill, index) => (
                   <div key={skill.name} className="space-y-2">
@@ -136,16 +151,11 @@ const About = () => {
                     "Integrações com APIs e automações",
                     "Aplicações mobile com React Native",
                     "UI/UX orientado à performance",
-                    "Deploy, monitoramento e escalabilidade em nuvem"
+                    "Deploy, monitoramento e escalabilidade em nuvem",
                   ].map((area) => (
-                    <div
-                      key={area}
-                      className="flex items-center space-x-2"
-                    >
+                    <div key={area} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                      <span className="text-gray-300 text-sm">
-                        {area}
-                      </span>
+                      <span className="text-gray-300 text-sm">{area}</span>
                     </div>
                   ))}
                 </div>
