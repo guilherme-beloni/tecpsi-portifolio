@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
       <div className="container mx-auto px-6 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Logo e descrição */}
           <div className="text-center md:text-left">
             <div className="text-2xl font-bold mb-2">
@@ -16,7 +16,7 @@ const Footer = () => {
               Desenvolvedor Web Full Stack
             </p>
             {/* Links sociais */}
-            <div className="flex pt-4 space-x-4">
+            <div className="flex justify-center md:justify-start pt-4 space-x-4">
               {/* GitHub */}
               <a
                 href="https://github.com"
