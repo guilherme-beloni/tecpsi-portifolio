@@ -1,14 +1,10 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useContactForm } from '../hooks/useContactForm'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const contactRef = useRef<HTMLDivElement>(null)
+  const { formData, formState, handleInputChange, handleSubmit } = useContactForm()
 
   const socialLinks = [
     { name: 'GitHub', icon: '🐙', url: 'https://github.com' },
@@ -34,25 +30,6 @@ const Contact = () => {
     return () => observer.disconnect()
   }, [])
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simular envio do formulário
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    alert('Mensagem enviada com sucesso!')
-    setFormData({ name: '', email: '', message: '' })
-    setIsSubmitting(false)
-  }
 
   return (
     <section id="contact" className="py-20 bg-gray-800/50">
@@ -122,6 +99,23 @@ const Contact = () => {
 
             {/* Formulário de contato */}
             <div className="bg-gray-700/30 backdrop-blur-sm p-8 rounded-2xl border border-gray-600/50">
+              {/* Feedback de status */}
+              {formState.message && (
+                <div className={`mb-6 p-4 rounded-lg ${
+                  formState.isSuccess 
+                    ? 'bg-green-500/20 border border-green-500/50 text-green-400' 
+                    : formState.isError 
+                    ? 'bg-red-500/20 border border-red-500/50 text-red-400'
+                    : 'bg-blue-500/20 border border-blue-500/50 text-blue-400'
+                }`}>
+                  <div className="flex items-center space-x-2">
+                    {formState.isSuccess && <span>✅</span>}
+                    {formState.isError && <span>❌</span>}
+                    <span>{formState.message}</span>
+                  </div>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -173,10 +167,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={formState.isSubmitting}
                   className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
-                  {isSubmitting ? (
+                  {formState.isSubmitting ? (
                     <span className="flex items-center justify-center space-x-2">
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Enviando...</span>

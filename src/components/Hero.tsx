@@ -1,25 +1,28 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
-  const heroRef = useRef<HTMLDivElement>(null)
+  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (heroRef.current) {
-        const scrolled = window.pageYOffset
-        const parallax = scrolled * 0.5
-        heroRef.current.style.transform = `translateY(${parallax}px)`
+        const scrolled = window.pageYOffset;
+        const parallax = scrolled * 0.5;
+        heroRef.current.style.transform = `translateY(${parallax}px)`;
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background com efeito parallax */}
-      <div 
+      <div
         ref={heroRef}
         className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
       >
@@ -35,7 +38,7 @@ const Hero = () => {
               Desenvolvedor Web
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Criando experiências digitais excepcionais com tecnologias modernas
           </p>
@@ -63,13 +66,13 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute hidden-sm bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
