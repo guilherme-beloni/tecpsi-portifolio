@@ -22,12 +22,12 @@ const About = () => {
   }, []);
 
   const skills = [
-    { name: "React", level: 70 },
-    { name: "TypeScript", level: 65 },
-    { name: "Node.js", level: 50 },
-    { name: "Python", level: 25 },
-    { name: "Tailwind CSS", level: 46 },
-    { name: "JavaScript", level: 91.5 },
+    { name: "React / Next.js", level: 90 },
+    { name: "TypeScript / JavaScript", level: 85 },
+    { name: "Node.js / Express", level: 80 },
+    { name: "Tailwind CSS / Framer Motion", level: 75 },
+    { name: "PostgreSQL / MongoDB / Redis", level: 70 },
+    { name: "Docker / CI/CD / Cloud", level: 65 },
   ];
 
   return (
@@ -41,13 +41,14 @@ const About = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-slate-300 bg-clip-text ">Sobre Mim</span>
+              <span className="text-slate-300 bg-clip-text ">Sobre</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Sou um desenvolvedor apaixonado por criar experiências digitais
-              inovadoras e funcionais. Com foco em performance, usabilidade e
-              design, busco sempre entregar soluções que realmente fazem a
-              diferença.
+           
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
+              Sou especialista em desenvolvimento full stack com foco em entregar soluções digitais robustas, escaláveis e alinhadas aos objetivos estratégicos de cada cliente.
+            </p>
+            <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Com mais de 3 anos de atuação, ajudamos empresas a transformar ideias em produtos digitais de alto impacto — da interface ao backend, da prototipação ao deploy.
             </p>
           </div>
 
@@ -58,28 +59,39 @@ const About = () => {
                 <div className="w-30 h-30 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-green-600 rounded-full flex items-center justify-center text-4xl font-bold text-white">
                   GB
                 </div>
-                <h3 className="text-2xl font-bold text-center mb-4">
+                <h3 className="text-2xl font-bold text-center mb-2">
                   Guilherme Beloni
                 </h3>
+                <p className="text-lg font-semibold text-center mb-4 text-blue-400">
+                  Tech Lead & Full Stack Developer
+                </p>
                 <p className="text-gray-300 text-center leading-relaxed">
-                  Desenvolvedor Full Stack com mais de 5 anos de experiência
-                  criando aplicações web modernas e responsivas. Especializado
-                  em React, React Native, TypeScript e Node.js, sempre buscando
-                  as melhores práticas e tecnologias mais recentes.
+                  Atuo liderando e executando projetos de alto nível com foco em performance, usabilidade e escalabilidade. Trabalho com tecnologias modernas como React, TypeScript, Node.js e infraestrutura em nuvem. Tenho visão de negócio, responsabilidade técnica e compromisso com entregas de excelência.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-700/30 p-4 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-400">5+</div>
-                  <div className="text-sm text-gray-400">
-                    Anos de Experiência
+              <div className="bg-gradient-to-r from-blue-500/10 to-green-500/10 p-6 rounded-xl border border-blue-500/20">
+                <h4 className="text-lg font-semibold mb-4 text-blue-400 text-center">
+                  Números que Representam Nossa Experiência
+                </h4>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-gray-700/30 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-blue-400">3+</div>
+                    <div className="text-sm text-gray-400">
+                      anos de atuação no mercado
+                    </div>
                   </div>
-                </div>
-                <div className="bg-gray-700/30 p-4 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-green-400">20+</div>
-                  <div className="text-sm text-gray-400">
-                    Projetos Concluídos
+                  <div className="bg-gray-700/30 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-green-400">20+</div>
+                    <div className="text-sm text-gray-400">
+                      projetos entregues com sucesso
+                    </div>
+                  </div>
+                  <div className="bg-gray-700/30 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-purple-400">100%</div>
+                    <div className="text-sm text-gray-400">
+                      de feedbacks positivos
+                    </div>
                   </div>
                 </div>
               </div>
@@ -87,7 +99,8 @@ const About = () => {
 
             {/* Habilidades */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-6">Habilidades Técnicas</h3>
+              <h3 className="text-2xl font-bold mb-6">Tecnologias & Especialidades</h3>
+              <h4 className="text-xl font-semibold mb-4 text-blue-400">Stack Principal</h4>
               <div className="space-y-4">
                 {skills.map((skill, index) => (
                   <div key={skill.name} className="space-y-2">
@@ -114,23 +127,26 @@ const About = () => {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-blue-500/10 to-green-500/10 rounded-xl border border-blue-500/20">
                 <h4 className="text-lg font-semibold mb-3 text-blue-400">
-                  Áreas de Especialização
+                  Áreas de Atuação
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="space-y-3">
                   {[
-                    "Frontend Development",
-                    "Backend Development",
-                    "UI/UX Design",
-                    "Mobile Development",
-                    "DevOps",
-                    "Cloud & Deploy",
+                    "Desenvolvimento Web Full Stack",
+                    "Sistemas sob demanda",
+                    "Integrações com APIs e automações",
+                    "Aplicações mobile com React Native",
+                    "UI/UX orientado à performance",
+                    "Deploy, monitoramento e escalabilidade em nuvem"
                   ].map((area) => (
-                    <span
+                    <div
                       key={area}
-                      className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm hover:bg-blue-500/20 hover:text-blue-400 transition-colors duration-300"
+                      className="flex items-center space-x-2"
                     >
-                      {area}
-                    </span>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <span className="text-gray-300 text-sm">
+                        {area}
+                      </span>
+                    </div>
                   ))}
                 </div>
               </div>

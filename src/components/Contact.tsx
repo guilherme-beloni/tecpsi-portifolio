@@ -76,13 +76,10 @@ const Contact = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className=" bg-clip-text text-slate-300">
-                Entre em Contato
+                Contato
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Vamos trabalhar juntos! Entre em contato para discutir seu próximo
-              projeto
-            </p>
+          
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -90,12 +87,11 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-white">
-                  Vamos conversar!
+                Vamos criar algo grandioso juntos!
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-8">
-                  Estou aberto a novas ideias, novos projetos e oportunidades.
-                  Se você tem uma ideia ou precisa de ajuda com desenvolvimento,
-                  entre em contato!
+                Atendo empresas, agências e empreendedores que buscam parceiros técnicos para desenvolver projetos digitais com excelência.
+       
                 </p>
               </div>
 
@@ -129,10 +125,31 @@ const Contact = () => {
                 <h4 className="text-lg font-semibold mb-3 text-blue-400">
                   Informações
                 </h4>
-                <div className="space-y-2 text-gray-300">
-                  <p>📍 Presidente Prudente - SP, Brasil</p>
-                  <p>⏰ Disponível para novos projetos</p>
-                  <p>💼 Aberto a oportunidades</p>
+                <div className="space-y-4 text-gray-300">
+                  <div className="flex items-start space-x-3">
+                    <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span><strong>Baseado em Presidente Prudente – SP</strong></span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span><strong>Atendimento para empresas em todo o Brasil</strong></span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <svg className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                    </svg>
+                    <span><strong>Agenda disponível para novos projetos estratégicos</strong></span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16.5c-.83 0-1.5.67-1.5 1.5V14h3v8h2zM12.5 11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-7H9V9.5C9 8.12 7.88 7 6.5 7S4 8.12 4 9.5V15H2.5v7h5z"/>
+                    </svg>
+                    <span><strong>Parcerias B2B sob demanda e contratos recorrentes</strong></span>
+                  </div>
                 </div>
               </div>
             </div>

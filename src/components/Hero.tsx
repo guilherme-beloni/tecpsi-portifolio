@@ -11,7 +11,7 @@ const Hero = () => {
         const parallax = scrolled * 0.5;
         heroRef.current.style.transform = `translateY(${parallax}px)`;
       }
-      
+
       // Ocultar scroll indicator quando o usuário fizer scroll
       if (window.pageYOffset > 50) {
         setShowScrollIndicator(false);
@@ -43,13 +43,16 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 via-green-500 to-slate-500 bg-clip-text text-transparent">
-              Desenvolvedor Full Stack
+              Guilherme Beloni
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Transformando ideias em soluções digitais com tecnologia e design
-            moderno.
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-white">
+            Soluções Digitais Full Stack
+          </h2>
+
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Desenvolvimento de aplicações modernas, performáticas e escaláveis para empresas que exigem excelência.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -63,7 +66,7 @@ const Hero = () => {
               href="#contact"
               className="px-8 py-3 border border-gray-600 text-gray-300 rounded-full font-semibold hover:border-blue-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-105"
             >
-              Fale comigo
+              Fale com a equipe
             </a>
           </div>
         </div>
@@ -78,9 +81,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator - apenas para desktop */}
-      <div className={`absolute hidden md:block bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
-        showScrollIndicator ? 'opacity-100 animate-bounce' : 'opacity-0'
-      }`}>
+      <div
+        className={`absolute hidden md:block bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
+          showScrollIndicator ? "opacity-100 animate-bounce" : "opacity-0"
+        }`}
+      >
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
