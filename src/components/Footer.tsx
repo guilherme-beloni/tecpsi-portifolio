@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo e descrição */}
           <div className="text-center md:text-left">
             <div className="text-2xl font-bold mb-2">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">
                 Guilherme Beloni
               </span>
             </div>
@@ -69,15 +69,7 @@ const Footer = () => {
               >
                 <span className="text-xl">💼</span>
               </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
-                aria-label="Twitter"
-              >
-                <span className="text-xl">🐦</span>
-              </a>
+
               <a
                 href="mailto:contato@exemplo.com"
                 className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"

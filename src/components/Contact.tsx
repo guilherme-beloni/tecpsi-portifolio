@@ -43,7 +43,7 @@ const Contact = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <span className=" bg-clip-text text-slate-300">
                 Entre em Contato
               </span>
             </h2>
@@ -61,9 +61,9 @@ const Contact = () => {
                   Vamos conversar!
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-8">
-                  Estou sempre interessado em novos projetos e oportunidades. Se
-                  você tem uma ideia ou precisa de ajuda com desenvolvimento,
-                  não hesite em entrar em contato!
+                  Estou aberto a novas ideias, novos projetos e oportunidades.
+                  Se você tem uma ideia ou precisa de ajuda com desenvolvimento,
+                  entre em contato!
                 </p>
               </div>
 
@@ -93,13 +93,13 @@ const Contact = () => {
               </div>
 
               {/* Informações adicionais */}
-              <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
+              <div className="bg-gradient-to-r from-blue-500/10 to-green-500/10 p-6 rounded-xl border border-blue-500/20">
                 <h4 className="text-lg font-semibold mb-3 text-blue-400">
                   Informações
                 </h4>
                 <div className="space-y-2 text-gray-300">
-                  <p>📍 São Paulo, Brasil</p>
-                  <p>⏰ Disponível para projetos</p>
+                  <p>📍 Presidente Prudente - SP, Brasil</p>
+                  <p>⏰ Disponível para novos projetos</p>
                   <p>💼 Aberto a oportunidades</p>
                 </div>
               </div>
@@ -168,7 +168,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={formState.isSubmitting}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-green-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {formState.isSubmitting ? (
                     <span className="flex items-center justify-center space-x-2">

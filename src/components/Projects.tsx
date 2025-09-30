@@ -1,113 +1,119 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from "react";
 
 interface Project {
-  id: number
-  title: string
-  description: string
-  image: string
-  technologies: string[]
-  liveUrl: string
-  githubUrl: string
-  featured: boolean
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  liveUrl: string;
+  githubUrl: string;
+  featured: boolean;
 }
 
 const Projects = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-  const projectsRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
 
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: true
+      title: "E-commerce Platform",
+      description:
+        "Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: true,
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Aplicação de gerenciamento de tarefas com drag-and-drop, notificações em tempo real e colaboração em equipe.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: true
+      title: "Task Management App",
+      description:
+        "Aplicação de gerenciamento de tarefas com drag-and-drop, notificações em tempo real e colaboração em equipe.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: true,
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'Dashboard meteorológico com previsões em tempo real, mapas interativos e alertas personalizados.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Vue.js', 'Chart.js', 'OpenWeather API'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
+      title: "Weather Dashboard",
+      description:
+        "Dashboard meteorológico com previsões em tempo real, mapas interativos e alertas personalizados.",
+      image: "/api/placeholder/600/400",
+      technologies: ["Vue.js", "Chart.js", "OpenWeather API"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: false,
     },
     {
       id: 4,
-      title: 'Social Media Analytics',
-      description: 'Ferramenta de análise de redes sociais com métricas detalhadas e relatórios personalizáveis.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'D3.js', 'Python', 'FastAPI'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
+      title: "Social Media Analytics",
+      description:
+        "Ferramenta de análise de redes sociais com métricas detalhadas e relatórios personalizáveis.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "D3.js", "Python", "FastAPI"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: false,
     },
     {
       id: 5,
-      title: 'Portfolio Website',
-      description: 'Website pessoal responsivo com animações suaves e design minimalista.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
+      title: "Portfolio Website",
+      description:
+        "Website pessoal responsivo com animações suaves e design minimalista.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: false,
     },
     {
       id: 6,
-      title: 'Chat Application',
-      description: 'Aplicação de chat em tempo real com salas privadas, compartilhamento de arquivos e criptografia.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Socket.io', 'Node.js', 'Redis'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    }
-  ]
+      title: "Chat Application",
+      description:
+        "Aplicação de chat em tempo real com salas privadas, compartilhamento de arquivos e criptografia.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "Socket.io", "Node.js", "Redis"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: false,
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
       { threshold: 0.2 }
-    )
+    );
 
     if (projectsRef.current) {
-      observer.observe(projectsRef.current)
+      observer.observe(projectsRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
-        <div 
+        <div
           ref={projectsRef}
           className={`max-w-7xl mx-auto transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">
                 Meus Projetos
               </span>
             </h2>
@@ -122,19 +128,19 @@ const Projects = () => {
               <div
                 key={project.id}
                 className={`group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 ${
-                  project.featured ? 'lg:col-span-2' : ''
+                  project.featured ? "lg:col-span-2" : ""
                 }`}
                 style={{
-                  animationDelay: `${index * 100}ms`
+                  animationDelay: `${index * 100}ms`,
                 }}
               >
                 {/* Imagem do projeto */}
                 <div className="relative overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                  <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-green-500/20 flex items-center justify-center">
                     <div className="text-6xl opacity-50">🚀</div>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   {/* Overlay com botões */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="flex space-x-4">
@@ -168,7 +174,7 @@ const Projects = () => {
                       </span>
                     )}
                   </div>
-                  
+
                   <p className="text-gray-400 mb-4 line-clamp-2">
                     {project.description}
                   </p>
@@ -219,7 +225,9 @@ const Projects = () => {
           <div className="bg-gray-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-2xl font-bold text-white">{selectedProject.title}</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  {selectedProject.title}
+                </h3>
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -227,15 +235,19 @@ const Projects = () => {
                   ✕
                 </button>
               </div>
-              
+
               <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6">
                 <div className="text-6xl opacity-50">🚀</div>
               </div>
-              
-              <p className="text-gray-300 mb-6">{selectedProject.description}</p>
-              
+
+              <p className="text-gray-300 mb-6">
+                {selectedProject.description}
+              </p>
+
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Tecnologias Utilizadas</h4>
+                <h4 className="text-lg font-semibold text-white mb-3">
+                  Tecnologias Utilizadas
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.technologies.map((tech) => (
                     <span
@@ -247,7 +259,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="flex space-x-4">
                 <a
                   href={selectedProject.liveUrl}
@@ -271,7 +283,7 @@ const Projects = () => {
         </div>
       )}
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
