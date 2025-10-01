@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-
 interface InputProps {
   label?: string;
   placeholder?: string;
-  type?: 'text' | 'email' | 'password' | 'number';
+  type?: "text" | "email" | "password" | "number";
   value?: string;
   onChange?: (value: string) => void;
   error?: string;
@@ -15,27 +13,31 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({
   label,
   placeholder,
-  type = 'text',
-  value = '',
+  type = "text",
+  value = "",
   onChange,
   error,
   disabled = false,
   required = false,
-  className = ''
+  className = "",
 }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     onChange?.(newValue);
   };
-  
+
   const inputClasses = `
     w-full px-3 py-2 border rounded-md transition-colors duration-200
     focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
-    ${error ? 'border-red-500' : 'border-gray-500'}
-    ${disabled ? 'bg-gray-700 cursor-not-allowed text-gray-400' : 'bg-gray-700 text-white'}
+    ${error ? "border-red-500" : "border-gray-500"}
+    ${
+      disabled
+        ? "bg-gray-700 cursor-not-allowed text-gray-400"
+        : "bg-gray-700 text-white"
+    }
     ${className}
   `;
-  
+
   return (
     <div className="space-y-1">
       {label && (
@@ -53,9 +55,7 @@ const Input: React.FC<InputProps> = ({
         required={required}
         className={inputClasses}
       />
-      {error && (
-        <p className="text-sm text-red-400">{error}</p>
-      )}
+      {error && <p className="text-sm text-red-400">{error}</p>}
     </div>
   );
 };
