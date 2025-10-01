@@ -6,22 +6,22 @@ const CustomCursor = () => {
   const [isClicking, setIsClicking] = useState(false);
   const [cursorVariant, setCursorVariant] = useState("default");
 
-  
   // Controle manual do cursor - altere aqui: true = cursor personalizado, false = cursor padrão
   const isCustomCursorEnabled = false;
 
-
-
+  {
+    /* */
+  }
   useEffect(() => {
     // Aplicar/remover cursor customizado baseado no estado
     if (isCustomCursorEnabled) {
-      document.body.style.cursor = 'none';
-      document.body.classList.add('custom-cursor-enabled');
+      document.body.style.cursor = "none";
+      document.body.classList.add("custom-cursor-enabled");
     } else {
-      document.body.style.cursor = 'auto';
-      document.body.classList.remove('custom-cursor-enabled');
+      document.body.style.cursor = "auto";
+      document.body.classList.remove("custom-cursor-enabled");
     }
-  }, []);
+  }, [isCustomCursorEnabled]);
 
   useEffect(() => {
     if (!isCustomCursorEnabled) return;
@@ -32,7 +32,7 @@ const CustomCursor = () => {
 
     const handleMouseOver = (e: Event) => {
       const target = e.target as HTMLElement;
-      
+
       // Detecta elementos clicáveis
       if (
         target.tagName === "A" ||
@@ -43,10 +43,7 @@ const CustomCursor = () => {
       ) {
         setIsHovering(true);
         setCursorVariant("link");
-      } else if (
-        target.tagName === "INPUT" ||
-        target.tagName === "TEXTAREA"
-      ) {
+      } else if (target.tagName === "INPUT" || target.tagName === "TEXTAREA") {
         setIsHovering(true);
         setCursorVariant("input");
       } else {
@@ -92,7 +89,9 @@ const CustomCursor = () => {
 
           {/* Cursor seguidor - anel grande */}
           <div
-            className={`custom-cursor-ring ${isHovering ? "hovering" : ""} ${isClicking ? "clicking" : ""} ${cursorVariant}`}
+            className={`custom-cursor-ring ${isHovering ? "hovering" : ""} ${
+              isClicking ? "clicking" : ""
+            } ${cursorVariant}`}
             style={{
               left: `${mousePosition.x}px`,
               top: `${mousePosition.y}px`,
@@ -105,4 +104,3 @@ const CustomCursor = () => {
 };
 
 export default CustomCursor;
-

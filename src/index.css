@@ -108,6 +108,7 @@ html {
 /* Fonte padrão Roboto */
 body {
   font-family: 'Roboto', sans-serif;
+  cursor: none;
 }
 
 /* Ocultar cursor customizado em dispositivos touch */
@@ -189,6 +190,15 @@ body {
   .custom-cursor-enabled * {
     cursor: none !important;
   }
+}
+
+/* Garantir que cursor padrão apareça quando customizado estiver desabilitado */
+body:not(.custom-cursor-enabled) {
+  cursor: auto !important;
+}
+
+body:not(.custom-cursor-enabled) * {
+  cursor: auto !important;
 }
 
 /* Efeitos de hover para links */
