@@ -83,10 +83,10 @@ const Contact = () => {
             {/* Informações de contato */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-white">
+                <h3 className="text-xl lg:text-2xl font-bold mb-6 text-white">
                   Vamos criar algo grandioso juntos!
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-8">
+                <p className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-8">
                   Atendo empresas, agências e empreendedores que buscam
                   parceiros técnicos para desenvolver projetos digitais com
                   excelência.

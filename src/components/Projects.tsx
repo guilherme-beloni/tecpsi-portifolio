@@ -120,7 +120,7 @@ const Projects = () => {
                 Meus Projetos
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-sm lg:text-xl text-gray-300 max-w-3xl mx-auto">
               Uma seleção dos meus projetos mais recentes e impactantes
             </p>
           </div>

@@ -44,12 +44,12 @@ const About = () => {
               <span className="text-slate-300 bg-clip-text ">Sobre</span>
             </h2>
 
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
+            <p className="text-sm lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
               Sou especialista em desenvolvimento full stack com foco em
               entregar soluções digitais robustas, escaláveis e alinhadas aos
               objetivos estratégicos de cada cliente.
             </p>
-            <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm lg:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Com mais de 5 anos de atuação, ajudamos empresas a transformar
               ideias em produtos digitais de alto impacto — da interface ao
               backend, da prototipação ao deploy.
@@ -69,7 +69,7 @@ const About = () => {
                 <p className="text-lg font-semibold text-center mb-4 text-blue-400">
                   Tech Lead & Full Stack Developer
                 </p>
-                <p className="text-gray-300 text-center leading-relaxed">
+                <p className="text-gray-300 text-sm lg:text-xl text-center leading-relaxed">
                   Atuo liderando e executando projetos de alto nível com foco em
                   performance, usabilidade e escalabilidade. Trabalho com
                   tecnologias modernas como React, TypeScript, Node.js e
@@ -81,22 +81,22 @@ const About = () => {
 
               <div className="bg-gradient-to-r from-blue-500/10 to-green-500/10 p-6 rounded-xl border border-blue-500/20">
                 <h4 className="text-lg font-semibold mb-4 text-blue-400 text-center">
-                  Números que Representam Nossa Experiência
+                  Números que representam minha experiência
                 </h4>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-gray-700/30 p-4 rounded-lg text-center">
+                  <div className="bg-gray-700/30 p-4 rounded-lg text-left">
                     <div className="text-2xl font-bold text-blue-400">5+</div>
                     <div className="text-sm text-gray-400">
                       anos de atuação no mercado
                     </div>
                   </div>
-                  <div className="bg-gray-700/30 p-4 rounded-lg text-center">
+                  <div className="bg-gray-700/30 p-4 rounded-lg text-left">
                     <div className="text-2xl font-bold text-green-400">20+</div>
                     <div className="text-sm text-gray-400">
                       projetos entregues com sucesso
                     </div>
                   </div>
-                  <div className="bg-gray-700/30 p-4 rounded-lg text-center">
+                  <div className="bg-gray-700/30 p-4 rounded-lg text-left">
                     <div className="text-2xl font-bold text-purple-400">
                       100%
                     </div>
