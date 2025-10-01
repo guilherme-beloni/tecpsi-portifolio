@@ -44,12 +44,12 @@ const About = () => {
               <span className="text-slate-300 bg-clip-text ">Sobre</span>
             </h2>
 
-            <p className="text-sm lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
+            <p className="text-sm text-left lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
               Sou especialista em desenvolvimento full stack com foco em
               entregar soluções digitais robustas, escaláveis e alinhadas aos
               objetivos estratégicos de cada cliente.
             </p>
-            <p className="text-sm lg:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm text-left lg:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Com mais de 5 anos de atuação, ajudamos empresas a transformar
               ideias em produtos digitais de alto impacto — da interface ao
               backend, da prototipação ao deploy.
@@ -69,7 +69,7 @@ const About = () => {
                 <p className="text-lg font-semibold text-center mb-4 text-blue-400">
                   Tech Lead & Full Stack Developer
                 </p>
-                <p className="text-gray-300 text-sm lg:text-xl text-center leading-relaxed">
+                <p className="text-gray-300  text-sm lg:text-xl leading-relaxed">
                   Atuo liderando e executando projetos de alto nível com foco em
                   performance, usabilidade e escalabilidade. Trabalho com
                   tecnologias modernas como React, TypeScript, Node.js e
