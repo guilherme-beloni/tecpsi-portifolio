@@ -39,7 +39,7 @@ const Hero = () => {
       </div>
 
       {/* Conteúdo principal */}
-      <div className="relative z-10 w-full px-6 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full px-6 mt-16 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Coluna de texto */}
           <div className="order-1 lg:order-1 text-left animate-fade-in-up">
@@ -54,15 +54,16 @@ const Hero = () => {
             </h1>
 
             <p className="text-base md:text-lg font-bold text-gray-300 mb-8 leading-relaxed max-w-lg">
-            Desenvolvimento de aplicações modernas, performáticas e escaláveis
-            para empresas que exigem excelência.
+              Desenvolvimento de aplicações modernas, performáticas e escaláveis
+              para empresas que exigem excelência.
             </p>
 
             {/* Cards de informação com links minimalistas */}
             <div className="flex flex-row gap-4">
               <div className="bg-transparent backdrop-blur-sm p-0 flex flex-col flex-1">
                 <p className="text-xs lg:text-base text-gray-300 leading-relaxed mb-3">
-                  Altamente qualificado em aprimoramento progressivo, sistemas de design e engenharia de interface do usuário.
+                  Altamente qualificado em aprimoramento progressivo, sistemas
+                  de design e engenharia de interface do usuário.
                 </p>
                 <a
                   href="#projects"
@@ -74,7 +75,8 @@ const Hero = () => {
               </div>
               <div className="bg-transparent backdrop-blur-sm p-0 flex flex-col flex-1">
                 <p className="text-xs lg:text-base text-gray-300 leading-relaxed mb-3">
-                  Experiência comprovada na criação de produtos de sucesso para clientes em vários países.
+                  Experiência comprovada na criação de produtos de sucesso para
+                  clientes em vários países.
                 </p>
                 <a
                   href="#contact"
