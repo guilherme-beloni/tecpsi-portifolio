@@ -73,9 +73,8 @@ const About = () => {
                   Atuo liderando e executando projetos de alto nível com foco em
                   performance, usabilidade e escalabilidade. Trabalho com
                   tecnologias modernas como React, TypeScript, Node.js e
-                  infraestrutura em nuvem. Tenho visão de negócio,
-                  responsabilidade técnica e compromisso com entregas de
-                  excelência.
+                  infraestrutura em nuvem. "Visão de negócio, responsabilidade
+                  técnica e compromisso com entregas de excelência.""
                 </p>
               </div>
 
