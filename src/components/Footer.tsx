@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="flex justify-center md:justify-start pt-4 space-x-4">
               {/* GitHub */}
               <a
-                href="https://github.com"
+                href="https://github.com/guilherme-beloni"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
@@ -45,7 +45,7 @@ const Footer = () => {
 
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/guiibeloni"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
@@ -58,7 +58,7 @@ const Footer = () => {
 
               {/* Email */}
               <a
-                href="mailto:contato@exemplo.com"
+                href="mailto:adsguilhermezb@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
                 aria-label="Email"
               >
