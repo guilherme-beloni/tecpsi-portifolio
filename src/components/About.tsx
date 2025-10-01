@@ -74,7 +74,7 @@ const About = () => {
                   performance, usabilidade e escalabilidade. Trabalho com
                   tecnologias modernas como React, TypeScript, Node.js e
                   infraestrutura em nuvem. "Visão de negócio, responsabilidade
-                  técnica e compromisso com entregas de excelência.""
+                  técnica e compromisso com entregas de excelência."
                 </p>
               </div>
 

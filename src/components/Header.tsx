@@ -64,14 +64,15 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
                   isMenuOpen ? "rotate-45 translate-y-1.5" : ""
                 }`}
               ></span>
+           
               <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-                  isMenuOpen ? "opacity-0" : ""
+                className={`block h-0.5 w-5 bg-white transition-all duration-300 ${
+                  isMenuOpen ? " hidden" : ""
                 }`}
               ></span>
-              <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-                  isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+               <span
+                className={`block h-0.5 w-4 bg-white transition-all duration-300 ${
+                  isMenuOpen ? "-rotate-45 -translate-y-1.8 w-6" : ""
                 }`}
               ></span>
             </div>
