@@ -100,7 +100,7 @@ const About = () => {
                       100%
                     </div>
                     <div className="text-sm text-gray-400">
-                      de feedbacks positivos
+                      feedbacks positivos
                     </div>
                   </div>
                 </div>
