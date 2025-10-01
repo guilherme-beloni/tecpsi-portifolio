@@ -39,45 +39,90 @@ const Hero = () => {
       </div>
 
       {/* Conteúdo principal */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <div className="animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 via-green-500 to-slate-500 bg-clip-text text-transparent">
-              Guilherme Beloni
-            </span>
-          </h1>
+      <div className="relative z-10 w-full px-6 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Coluna de texto */}
+          <div className="order-1 lg:order-1 text-center lg:text-left animate-fade-in-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                Desenvolvedor Full Stack
+              </span>
+            </h1>
 
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-white">
-            Soluções Digitais Full Stack
-          </h2>
+            <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+              Desenvolvimento de aplicações modernas, performáticas e escaláveis
+              para empresas que exigem excelência.
+            </p>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Desenvolvimento de aplicações modernas, performáticas e escaláveis para empresas que exigem excelência.
-          </p>
+            {/* Cards de informação com links minimalistas */}
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-lg border border-gray-700/50 flex flex-col">
+                <p className="text-sm text-gray-400 leading-relaxed mb-3 flex-grow">
+                  Altamente qualificado em aprimoramento progressivo, sistemas
+                  de design e engenharia de interface do usuário.
+                </p>
+                <a
+                  href="#projects"
+                  className="text-sm font-medium text-green-400 hover:text-green-300 transition-colors duration-300 relative inline-block group w-fit"
+                >
+                  Ver Projetos →
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-400 transform origin-left transition-transform duration-300 group-hover:scale-x-110"></span>
+                </a>
+              </div>
+              <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-lg border border-gray-700/50 flex flex-col">
+                <p className="text-sm text-gray-400 leading-relaxed mb-3 flex-grow">
+                  Experiência comprovada na criação de produtos de sucesso para
+                  clientes em vários nichos.
+                </p>
+                <a
+                  href="#contact"
+                  className="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors duration-300 relative inline-block group w-fit"
+                >
+                  Fale comigo →
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 transform origin-left transition-transform duration-300 group-hover:scale-x-110"></span>
+                </a>
+              </div>
+            </div>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#projects"
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-green-600 text-white rounded-full font-semibold hover:from-blue-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-            >
-              Ver Projetos
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-3 border border-gray-600 text-gray-300 rounded-full font-semibold hover:border-blue-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-105"
-            >
-              Fale com a equipe
-            </a>
+          {/* Coluna de imagem */}
+          <div className="order-2 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Decoração de fundo - verde */}
+              <div className="absolute -bottom-6 -right-6 lg:-bottom-8 lg:-right-8 w-48 h-48 md:w-80 md:h-80 bg-green-500/20 rounded-3xl -z-10"></div>
+
+              {/* Elementos decorativos */}
+              <div className="absolute -top-3 -left-3 lg:-top-4 lg:-left-4 w-14 h-14 lg:w-20 lg:h-20 border-2 border-green-500/30 rounded-lg"></div>
+              <div className="absolute -bottom-3 -left-3 lg:-bottom-4 lg:-left-4 w-12 h-12 lg:w-16 lg:h-16 border-2 border-blue-500/30 rounded-full"></div>
+              <div className="absolute top-1/2 -right-6 lg:-right-8 flex flex-col gap-2">
+                <div className="w-2 h-2 lg:w-3 lg:h-3 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 lg:w-3 lg:h-3 bg-blue-500 rounded-full"></div>
+                <div className="w-2 h-2 lg:w-3 lg:h-3 bg-green-500 rounded-full"></div>
+                <div className="w-2 h-2 lg:w-3 lg:h-3 bg-blue-500 rounded-full"></div>
+                <div className="w-2 h-2 lg:w-3 lg:h-3 bg-green-500 rounded-full"></div>
+              </div>
+
+              {/* Padrão de pontos */}
+              <div className="absolute -top-6 -right-6 lg:-top-8 lg:-right-8 grid grid-cols-6 gap-1 lg:gap-2 opacity-50">
+                {[...Array(24)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-0.5 h-0.5 lg:w-1 lg:h-1 bg-green-500 rounded-full"
+                  ></div>
+                ))}
+              </div>
+
+              {/* Foto principal */}
+              <div className="relative w-48 h-48 md:w-80 md:h-80 overflow-hidden rounded-3xl border-4 border-gray-700/50 shadow-2xl">
+                <img
+                  src="/foto.png"
+                  alt="Guilherme Beloni"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Elementos decorativos */}
-        <div className="absolute left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-slate-500/20 rounded-full blur-xl animate-pulse delay-2000"></div>
-        <div className="absolute top-1/5 left-40 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-1 right-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/8 right-1/8 w-40 h-40 bg-slate-500/20 rounded-full blur-xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Scroll indicator - apenas para desktop */}
