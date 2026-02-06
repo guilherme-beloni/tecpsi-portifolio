@@ -4,7 +4,9 @@ const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
   const whatsappNumber = "+55 18 99680-9368";
-  const whatsappUrl = "https://wa.me/5518996809368";
+  const whatsappUrl = `https://wa.me/5518996809368?text=${encodeURIComponent(
+    "Olá, vim pelo site e preciso de um orçamento ",
+  )}`;
 
   const socialLinks = [
     {
@@ -52,7 +54,7 @@ const Contact = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (contactRef.current) {
@@ -85,7 +87,7 @@ const Contact = () => {
                   Vamos criar algo grandioso juntos!
                 </h3>
                 <p className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-8">
-                  Atendo empresas, agências e empreendedores que buscam
+                  Atendemos empresas, agências e empreendedores que buscam
                   parceiros técnicos para desenvolver projetos digitais com
                   excelência.
                 </p>
@@ -229,7 +231,9 @@ const Contact = () => {
 
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <div className="text-xs text-white/50">Tempo de resposta</div>
+                    <div className="text-xs text-white/50">
+                      Tempo de resposta
+                    </div>
                     <div className="mt-1 text-white font-semibold">
                       Rápido no horário comercial
                     </div>

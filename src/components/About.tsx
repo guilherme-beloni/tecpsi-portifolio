@@ -11,7 +11,7 @@ const About = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (aboutRef.current) {
@@ -76,8 +76,8 @@ const About = () => {
                   Tech Lead & Full Stack Developer
                 </p>
                 <p className="text-gray-300  text-sm lg:text-xl leading-relaxed">
-                  Atuo liderando e executando projetos de alto nível com foco em
-                  performance, usabilidade e escalabilidade. Trabalho com
+                  Atuamos liderando e executando projetos de alto nível com foco
+                  em performance, usabilidade e escalabilidade. Trabalho com
                   tecnologias modernas como React, TypeScript, Node.js e
                   infraestrutura em nuvem. "Visão de negócio, responsabilidade
                   técnica e compromisso com entregas de excelência."
@@ -96,7 +96,9 @@ const About = () => {
                     </div>
                   </div>
                   <div className="bg-gray-700/30 p-4 rounded-lg text-left">
-                    <div className="text-2xl font-bold text-violet-400">20+</div>
+                    <div className="text-2xl font-bold text-violet-400">
+                      20+
+                    </div>
                     <div className="text-sm text-gray-400">
                       projetos entregues com sucesso
                     </div>

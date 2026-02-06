@@ -107,7 +107,9 @@ const Footer = () => {
             <div className="text-sm font-bold text-white">Contato direto</div>
             <div className="mt-4 space-y-3 text-sm">
               <a
-                href="https://wa.me/5518996809368"
+                href={`https://wa.me/5518996809368?text=${encodeURIComponent(
+                  "Olá, vim pelo site e preciso de um orçamento "
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
