@@ -295,27 +295,27 @@ const Projects = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 rounded-2xl border border-white/10 bg-gradient-to-r from-violet-500/10 to-indigo-500/10 p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-extrabold text-white">
+          <div className="mt-12 rounded-2xl border border-white/10 bg-gradient-to-r from-violet-500/10 to-indigo-500/10 p-6 sm:p-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6">
+            <div className="text-center lg:text-left">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
                 Vamos montar a solução ideal para o seu negócio?
               </h3>
-              <p className="mt-2 text-white/70 max-w-2xl">
+              <p className="mt-2 text-sm sm:text-base text-white/70 max-w-2xl mx-auto lg:mx-0">
                 Me conte seu cenário (segmento, volume de atendimento, dores e
                 metas). Eu retorno com uma proposta objetiva de escopo e
                 cronograma.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-end">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center h-11 px-5 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold shadow-lg shadow-violet-600/20 hover:brightness-110 transition"
+                className="inline-flex items-center justify-center h-11 px-5 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold shadow-lg shadow-violet-600/20 hover:brightness-110 transition w-full sm:w-auto"
               >
                 Pedir orçamento
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center h-11 px-5 rounded-lg border border-white/20 bg-white/5 text-white/90 font-semibold hover:bg-white/10 transition"
+                className="inline-flex items-center justify-center h-11 px-5 rounded-lg border border-white/20 bg-white/5 text-white/90 font-semibold hover:bg-white/10 transition w-full sm:w-auto"
               >
                 Tirar dúvidas
               </a>

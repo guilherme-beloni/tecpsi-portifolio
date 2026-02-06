@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { useContactForm } from "../hooks/useContactForm";
-import EmailModal from "./EmailModal";
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
-  const { formData, formState, handleInputChange, handleSubmit, closeModal } =
-    useContactForm();
+  const whatsappNumber = "+55 18 99680-9368";
+  const whatsappUrl = "https://wa.me/5518996809368";
 
   const socialLinks = [
     {
@@ -182,94 +180,77 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Formulário de contato */}
-            <div className="bg-gray-700/30 backdrop-blur-sm p-8 rounded-2xl border border-gray-600/50">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors duration-300"
-                    placeholder="Seu nome completo"
-                  />
+            {/* Cartão de visitas (WhatsApp) */}
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-gray-800/45 to-gray-800/25 backdrop-blur-sm p-6 sm:p-8">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(168,85,247,0.18),transparent_55%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_35%,rgba(99,102,241,0.14),transparent_55%)] pointer-events-none" />
+
+              <div className="relative">
+                <div className="flex flex-col sm:flex-row sm:items-start items-center justify-between gap-5 sm:gap-6 text-center sm:text-left">
+                  <div className="w-full">
+                    <div className="text-xs tracking-widest text-white/50 uppercase">
+                      Cartão de visitas
+                    </div>
+                    <h3 className="mt-2 text-xl sm:text-2xl font-extrabold text-white">
+                      Guilherme Beloni
+                    </h3>
+                    <p className="mt-1 text-sm sm:text-base text-white/70 font-semibold">
+                      Tech Lead & Full Stack Developer
+                    </p>
+                  </div>
+
+                  <div className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                    <span className="text-2xl">💬</span>
+                  </div>
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors duration-300"
-                    placeholder="seu@email.com"
-                  />
+                <div className="mt-6 rounded-xl border border-white/10 bg-black/20 p-5 text-center sm:text-left">
+                  <div className="text-xs text-white/50">WhatsApp</div>
+                  <div className="mt-1 text-base sm:text-lg font-bold text-white">
+                    {whatsappNumber}
+                  </div>
+                  <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-3 justify-center sm:justify-start">
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center h-11 px-5 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold shadow-lg shadow-violet-600/20 hover:brightness-110 transition w-full sm:w-auto"
+                    >
+                      Chamar no WhatsApp
+                    </a>
+                    <a
+                      href="mailto:adsguilhermezb@gmail.com"
+                      className="inline-flex items-center justify-center h-11 px-5 rounded-lg border border-white/20 bg-white/5 text-white/90 font-semibold hover:bg-white/10 transition w-full sm:w-auto"
+                    >
+                      Enviar e-mail
+                    </a>
+                  </div>
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-2"
-                  >
-                    Mensagem
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors duration-300 resize-none"
-                    placeholder="Conte-me sobre seu projeto..."
-                  />
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="text-xs text-white/50">Tempo de resposta</div>
+                    <div className="mt-1 text-white font-semibold">
+                      Rápido no horário comercial
+                    </div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="text-xs text-white/50">Atendimento</div>
+                    <div className="mt-1 text-white font-semibold">
+                      Brasil inteiro (remoto)
+                    </div>
+                  </div>
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={formState.isSubmitting}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-violet-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                >
-                  {formState.isSubmitting ? (
-                    <span className="flex items-center justify-center space-x-2">
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Enviando...</span>
-                    </span>
-                  ) : (
-                    "Enviar Mensagem"
-                  )}
-                </button>
-              </form>
+                <div className="mt-6 text-xs text-white/45 text-center sm:text-left">
+                  Prefere algo mais direto? Me chama no WhatsApp com uma frase:
+                  “Quero um orçamento para…”
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Modal de confirmação */}
-
-      <EmailModal
-        isOpen={formState.showModal}
-        onClose={closeModal}
-        status={formState.modalStatus}
-        message={formState.message}
-      />
     </section>
   );
 };
