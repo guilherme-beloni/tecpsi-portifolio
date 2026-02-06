@@ -71,13 +71,25 @@ const Hero = () => {
               className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[78%] h-24 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.75),transparent_70%)] blur-xl pointer-events-none"
               aria-hidden="true"
             />
-            <img
-              src="/dash_mac.png"
-              alt="Preview do dashboard no notebook"
-              className="relative w-full h-auto block drop-shadow-[0_30px_70px_rgba(0,0,0,0.65)]"
-              draggable={false}
-              loading="lazy"
-            />
+
+            <div className="relative mx-auto max-w-6xl">
+              <img
+                src="/dash_mac.png"
+                alt="Preview do dashboard no notebook"
+                className="relative w-full h-auto block drop-shadow-[0_30px_70px_rgba(0,0,0,0.65)]"
+                draggable={false}
+                loading="lazy"
+              />
+
+              {/* Smartphone (no mobile fica abaixo; no desktop fica ao lado com sobreposição) */}
+              <img
+                src="/dash_iphone.png"
+                alt="Preview do dashboard no smartphone"
+                className="absolute bottom-[-4%] right-[-1%] w-32 sm:bottom-[-4%] sm:right-[-2%] sm:w-[210px] md:w-[250px] lg:w-[280px] h-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.75)]"
+                draggable={false}
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
