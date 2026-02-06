@@ -45,7 +45,7 @@ const About = () => {
             </h2>
 
             <p className="text-sm text-left lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
-              Sou especialista em desenvolvimento full stack com foco em
+              Somos especialistas em desenvolvimento full stack com foco em
               entregar soluções digitais robustas, escaláveis e alinhadas aos
               objetivos estratégicos de cada cliente.
             </p>
