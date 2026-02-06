@@ -60,8 +60,14 @@ const About = () => {
             {/* Informações pessoais */}
             <div className="space-y-6">
               <div className="bg-gray-700/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-600/50">
-                <div className="w-30 h-30 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-green-600 rounded-full flex items-center justify-center text-4xl font-bold text-white">
-                  GB
+                <div className="w-30 h-30 mx-auto mb-6 rounded-full overflow-hidden border border-white/10 shadow-lg shadow-black/30">
+                  <img
+                    src="/gui.jpeg"
+                    alt="Guilherme Beloni"
+                    className="w-full h-full object-cover object-center"
+                    draggable={false}
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-2">
                   Guilherme Beloni
@@ -78,7 +84,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-r from-blue-500/10 to-green-500/10 p-6 rounded-xl border border-blue-500/20">
+              <div className="bg-gradient-to-r from-blue-500/10 to-violet-500/10 p-6 rounded-xl border border-blue-500/20">
                 <h4 className="text-lg font-semibold mb-4 text-blue-400 text-center">
                   Números que representam minha experiência
                 </h4>
@@ -90,7 +96,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="bg-gray-700/30 p-4 rounded-lg text-left">
-                    <div className="text-2xl font-bold text-green-400">20+</div>
+                    <div className="text-2xl font-bold text-violet-400">20+</div>
                     <div className="text-sm text-gray-400">
                       projetos entregues com sucesso
                     </div>
@@ -128,7 +134,7 @@ const About = () => {
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-green-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-blue-500 to-violet-600 h-2 rounded-full transition-all duration-1000 ease-out"
                         style={{
                           width: isVisible ? `${skill.level}%` : "0%",
                           transitionDelay: `${index * 100}ms`,
@@ -139,7 +145,7 @@ const About = () => {
                 ))}
               </div>
 
-              <div className="mt-8 p-6 bg-gradient-to-r from-blue-500/10 to-green-500/10 rounded-xl border border-blue-500/20">
+              <div className="mt-8 p-6 bg-gradient-to-r from-blue-500/10 to-violet-500/10 rounded-xl border border-blue-500/20">
                 <h4 className="text-lg font-semibold mb-3 text-blue-400">
                   Áreas de Atuação
                 </h4>

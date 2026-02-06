@@ -7,10 +7,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Logo e descrição */}
           <div className="text-center md:text-left">
-            <div className="text-2xl font-bold mb-2">
-              <span className="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">
-                Guilherme Beloni
-              </span>
+            <div className="mb-2 flex justify-center md:justify-start">
+              <img
+                src="/logo_branca.png"
+                alt="Beloni Softwarehouse"
+                className="h-10 md:h-12 w-auto"
+                draggable={false}
+                loading="lazy"
+              />
             </div>
             <p className="text-gray-400 text-sm">
               Desenvolvedor Web Full Stack

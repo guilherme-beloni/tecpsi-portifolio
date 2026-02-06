@@ -345,7 +345,7 @@ const ComponentShowcase: React.FC<ComponentShowcaseProps> = ({ onClose }) => {
 
           {/* Alert */}
           {showAlert && (
-            <div className="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-bounce">
+            <div className="fixed top-4 right-4 bg-violet-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-bounce">
               {alertMessage} 🎉
             </div>
           )}

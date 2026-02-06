@@ -39,8 +39,8 @@ const EmailModal = ({ isOpen, onClose, status, message }: EmailModalProps) => {
           {/* Ícone animado */}
           <div className="mb-6">
             {isSuccess && (
-              <div className="w-20 h-20 mx-auto bg-green-500/20 rounded-full flex items-center justify-center animate-pulse">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto bg-violet-500/20 rounded-full flex items-center justify-center animate-pulse">
+                <div className="w-12 h-12 bg-violet-600 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -61,7 +61,7 @@ const EmailModal = ({ isOpen, onClose, status, message }: EmailModalProps) => {
 
           {/* Título */}
           <h3 className={`text-2xl font-bold mb-4 ${
-            isSuccess ? 'text-green-400' : 'text-red-400'
+            isSuccess ? 'text-violet-400' : 'text-red-400'
           }`}>
             {isSuccess ? 'Email Enviado!' : 'Erro no Envio'}
           </h3>
@@ -76,7 +76,7 @@ const EmailModal = ({ isOpen, onClose, status, message }: EmailModalProps) => {
             onClick={onClose}
             className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
               isSuccess 
-                ? 'bg-green-500 hover:bg-green-600 text-white' 
+                ? 'bg-violet-600 hover:bg-violet-700 text-white' 
                 : 'bg-red-500 hover:bg-red-600 text-white'
             }`}
           >

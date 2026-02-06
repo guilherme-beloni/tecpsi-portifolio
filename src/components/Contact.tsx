@@ -119,7 +119,7 @@ const Contact = () => {
               </div>
 
               {/* Informações adicionais */}
-              <div className="bg-gradient-to-r from-blue-500/10 to-green-500/10 p-6 rounded-xl border border-blue-500/20">
+              <div className="bg-gradient-to-r from-blue-500/10 to-violet-500/10 p-6 rounded-xl border border-blue-500/20">
                 <h4 className="text-lg font-semibold mb-3 text-blue-400">
                   Informações
                 </h4>
@@ -138,7 +138,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-start space-x-3">
                     <svg
-                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -245,7 +245,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={formState.isSubmitting}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-green-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-violet-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {formState.isSubmitting ? (
                     <span className="flex items-center justify-center space-x-2">

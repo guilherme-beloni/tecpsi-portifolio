@@ -86,12 +86,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #92ec7b);
+  background: linear-gradient(to bottom, #3b82f6, #a855f7);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #399a2c);
+  background: linear-gradient(to bottom, #2563eb, #7c3aed);
 }
 
 /* Seleção de texto personalizada */
@@ -108,7 +108,27 @@ html {
 /* Fonte padrão Roboto */
 body {
   font-family: 'Roboto', sans-serif;
-  cursor: none;
+  cursor: auto;
+}
+
+/* Cursor pointer para ações clicáveis (quando o cursor padrão estiver ativo) */
+a[href],
+button,
+summary,
+[role="button"],
+label[for],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
 }
 
 /* Ocultar cursor customizado em dispositivos touch */
@@ -151,7 +171,7 @@ body {
 .custom-cursor-ring.hovering {
   width: 35px;
   height: 35px;
-  border-color: rgba(16, 185, 129, 0.8);
+  border-color: rgba(168, 85, 247, 0.85);
 }
 
 .custom-cursor-ring.clicking {
@@ -163,8 +183,8 @@ body {
 }
 
 .custom-cursor-ring.link {
-  border-color: rgba(16, 185, 129, 0.8);
-  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(168, 85, 247, 0.85);
+  background: rgba(168, 85, 247, 0.12);
 }
 
 .custom-cursor-ring.input {
@@ -197,10 +217,6 @@ body:not(.custom-cursor-enabled) {
   cursor: auto !important;
 }
 
-body:not(.custom-cursor-enabled) * {
-  cursor: auto !important;
-}
-
 /* Efeitos de hover para links */
 a {
   transition: all 0.3s ease;
@@ -208,7 +224,7 @@ a {
 
 /* Gradientes personalizados */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #92ec7b, #fff);
+  background: linear-gradient(135deg, #3b82f6, #a855f7, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
