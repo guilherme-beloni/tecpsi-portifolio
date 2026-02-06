@@ -1,43 +1,43 @@
-import { useState, useEffect } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import CustomCursor from './components/CustomCursor'
-import Analytics from './components/Analytics'
+import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
+import Analytics from "./components/Analytics";
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Smooth scroll para navegação
     const handleSmoothScroll = (e: Event) => {
-      const target = e.target as HTMLAnchorElement
+      const target = e.target as HTMLAnchorElement;
       if (target.hash) {
-        e.preventDefault()
-        const element = document.querySelector(target.hash)
+        e.preventDefault();
+        const element = document.querySelector(target.hash);
         if (element) {
           element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          })
+            behavior: "smooth",
+            block: "start",
+          });
         }
       }
-    }
+    };
 
-    const links = document.querySelectorAll('a[href^="#"]')
-    links.forEach(link => {
-      link.addEventListener('click', handleSmoothScroll)
-    })
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach((link) => {
+      link.addEventListener("click", handleSmoothScroll);
+    });
 
     return () => {
-      links.forEach(link => {
-        link.removeEventListener('click', handleSmoothScroll)
-      })
-    }
-  }, [])
+      links.forEach((link) => {
+        link.removeEventListener("click", handleSmoothScroll);
+      });
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
@@ -55,7 +55,7 @@ function App() {
       {/* Botão flutuante (WhatsApp) */}
       <a
         href={`https://wa.me/5518996809368?text=${encodeURIComponent(
-          'Olá, vim pelo site e preciso de um orçamento '
+          "Olá, vim pelo site e preciso de um orçamento ",
         )}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -78,7 +78,7 @@ function App() {
         </svg>
       </a>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
