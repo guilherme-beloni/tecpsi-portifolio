@@ -5,7 +5,7 @@ const Contact = () => {
   const contactRef = useRef<HTMLDivElement>(null);
   const whatsappNumber = "+55 18 99680-9368";
   const whatsappUrl = `https://wa.me/5518996809368?text=${encodeURIComponent(
-    "Olá, vim pelo site e preciso de um orçamento ",
+    "Olá, vim pelo site e preciso de um orçamento!",
   )}`;
 
   const socialLinks = [
