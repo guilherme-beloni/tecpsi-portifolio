@@ -86,8 +86,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
                 </a>
               ))}
             </div>
-
-            <button
+            {/*   <button
               type="button"
               aria-label="Pesquisar"
               className="h-9 w-9 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-colors duration-200 inline-flex items-center justify-center"
@@ -112,7 +111,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
                   strokeLinecap="round"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -170,7 +169,6 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
             >
               Buscar
             </button> */}
-       
           </div>
         </div>
       </nav>
