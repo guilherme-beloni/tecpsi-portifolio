@@ -47,7 +47,7 @@ const Hero = () => {
               <img
                 src="/PSI_White%20Stroke.png"
                 alt="PSI"
-                className="relative w-[220px] sm:w-[320px] lg:w-[360px] h-auto drop-shadow-[0_25px_45px_rgba(34,65,95,0.30)] select-none"
+                className="relative w-[190px] sm:w-[320px] lg:w-[360px] h-auto drop-shadow-[0_25px_45px_rgba(34,65,95,0.30)] select-none"
                 draggable={false}
               />
             </div>
