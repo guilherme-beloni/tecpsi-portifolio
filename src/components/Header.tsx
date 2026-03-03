@@ -38,7 +38,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
         aria-hidden="true"
       />
 
-      <nav className="relative max-w-7xl mx-auto px-6 py-2">
+      <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a

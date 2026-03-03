@@ -430,39 +430,41 @@ const Projects = () => {
           </div>
 
           {/* Parceiros atendidos */}
-          <div className="mt-14">
+          <div className="mt-14 rounded-2xl sm:rounded-3xl border border-[#87868a]/30 bg-gradient-to-b from-[#22415f]/18 to-black/10 p-4 sm:p-8">
             <div className="text-center mb-8">
-              <h3 className="text-3xl md:text-4xl font-extrabold text-white">
-              Empresas que confiaram em nossa atuação
+              <p className="text-xs sm:text-sm tracking-[0.16em] uppercase text-[#ffeafc]/70 font-semibold">
+                Portfólio de confiança
+              </p>
+              <h3 className="mt-3 text-xl sm:text-2xl md:text-3xl font-bold text-white">
+                Empresas que confiaram em nossa atuação
               </h3>
-              <p className="mt-3 text-white/70 max-w-3xl mx-auto">
-              Organizações e operações que confiaram em nossa expertise para fortalecer seus ambientes de dados e processos críticos.
+              <p className="mt-3 text-sm sm:text-base text-white/70 max-w-3xl mx-auto leading-relaxed">
+                Organizações e operações que confiaram em nossa expertise para
+                fortalecer seus ambientes de dados e processos críticos.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4 justify-items-center">
               {partners.map((partner) => (
                 <div
                   key={partner.name}
-                  className="group rounded-2xl border border-[#87868a]/35 bg-gray-800/35 backdrop-blur-sm p-4 sm:p-5 hover:bg-gray-800/45 transition-colors duration-300"
+                  className="group h-[154px] w-full max-w-[156px] sm:h-[176px] sm:w-[170px] rounded-lg sm:rounded-xl border border-white/10 bg-[#0f1726]/55 p-2.5 sm:p-3 transition-all duration-300 hover:border-[#269ed0]/40 hover:bg-[#14233a]/65 flex flex-col justify-between"
                 >
-                  <div className="h-20 sm:h-24 rounded-xl bg-white/95 flex items-center justify-center p-3">
+                  <div className="h-[84px] sm:h-[102px] rounded-lg bg-white/95 border border-black/5 flex items-center justify-center p-2 sm:p-2.5">
                     <img
                       src={partner.logo}
                       alt={`Logo ${partner.name}`}
-                      className="max-h-full max-w-full object-contain"
+                      className="h-full w-full object-contain"
                       loading="lazy"
                       draggable={false}
                     />
                   </div>
-                  <p className="mt-3 text-center text-sm font-semibold text-white/85 group-hover:text-[#ffeafc] transition-colors">
+                  <p className="mt-2 h-8 sm:h-9 text-center text-[10px] sm:text-[11px] leading-[1.05rem] sm:leading-[1.1rem] font-medium text-white/80 group-hover:text-white transition-colors overflow-hidden [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">
                     {partner.name}
                   </p>
                 </div>
               ))}
             </div>
-
-           
           </div>
 
           {/* CTA */}
