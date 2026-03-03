@@ -45,9 +45,9 @@ const Hero = () => {
               {/* brilho atrás da arte */}
               <div className="absolute -inset-8 sm:-inset-10 bg-[radial-gradient(circle_at_50%_50%,rgba(255,234,252,0.35),transparent_60%)] blur-2xl" />
               <img
-                src="/psi-white-stroke.png"
+                src="/PSI_White%20Stroke.png"
                 alt="PSI"
-                className="relative w-[220px] sm:w-[360px] lg:w-[430px] h-auto drop-shadow-[0_25px_45px_rgba(34,65,95,0.30)] select-none"
+                className="relative w-[220px] sm:w-[320px] lg:w-[360px] h-auto drop-shadow-[0_25px_45px_rgba(34,65,95,0.30)] select-none"
                 draggable={false}
               />
             </div>

@@ -49,7 +49,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
             <img
               src="/psi-branco.png"
               alt="PSI"
-              className="h-12 md:h-16 w-auto"
+              className="h-8 md:h-12 w-auto"
               draggable={false}
             />
           </a>

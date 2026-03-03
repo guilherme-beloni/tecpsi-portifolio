@@ -87,7 +87,7 @@ const EmailModal = ({ isOpen, onClose, status, message }: EmailModalProps) => {
           {isSuccess && (
             <div className="mt-4 p-4 bg-gray-700/50 rounded-lg">
               <p className="text-sm text-gray-400">
-                📧 O email foi enviado para <strong>adsguilhermezb@gmail.com</strong>
+                📧 O email foi enviado para <strong>fernando@tecpsi.com.br</strong>
               </p>
               <p className="text-xs text-gray-500 mt-1">
                 Responderemos em breve!
