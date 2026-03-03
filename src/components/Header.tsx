@@ -34,7 +34,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
       <div
         className={`absolute inset-0 transition-opacity duration-300 ${
           scrolled || isMenuOpen ? "opacity-100" : "opacity-0"
-        } bg-[#0b1020]/85 backdrop-blur-md shadow-lg border-b border-white/5`}
+        } bg-[#22415f]/90 backdrop-blur-md shadow-lg border-b border-[#ffeafc]/20`}
         aria-hidden="true"
       />
 
@@ -47,8 +47,8 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: HeaderProps) => {
             aria-label="Ir para o início"
           >
             <img
-              src="/logo_branca.png"
-              alt="Beloni Softwarehouse"
+              src="/psi-branco.png"
+              alt="PSI"
               className="h-12 md:h-16 w-auto"
               draggable={false}
             />

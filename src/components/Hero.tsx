@@ -5,9 +5,9 @@ const Hero = () => {
       className="relative overflow-hidden"
     >
       {/* Fundo (bem próximo da referência) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0b1020] via-[#0a0f1f] to-[#070a12]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(168,85,247,0.20),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_30%,rgba(99,102,241,0.18),transparent_55%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#22415f] via-[#1b334c] to-[#000000]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(255,234,252,0.22),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_30%,rgba(135,134,138,0.20),transparent_55%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_90%,rgba(255,255,255,0.06),transparent_60%)]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-14 md:pb-16">
@@ -27,13 +27,13 @@ const Hero = () => {
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4">
               <a
                 href="#about"
-                className="inline-flex items-center justify-center h-11 px-5 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold shadow-lg shadow-violet-600/20 hover:brightness-110 transition w-full sm:w-auto"
+                className="btn-primary inline-flex items-center justify-center h-11 px-5 rounded-lg font-semibold transition w-full sm:w-auto"
               >
                 Saiba Mais
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center h-11 px-5 rounded-lg border border-white/20 bg-white/5 text-white/90 font-semibold hover:bg-white/10 transition w-full sm:w-auto"
+                className="btn-secondary inline-flex items-center justify-center h-11 px-5 rounded-lg font-semibold transition w-full sm:w-auto"
               >
                 Contate-nos
               </a>
@@ -43,11 +43,11 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-fade-in-right">
             <div className="relative">
               {/* brilho atrás da arte */}
-              <div className="absolute -inset-8 sm:-inset-10 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.35),transparent_60%)] blur-2xl" />
+              <div className="absolute -inset-8 sm:-inset-10 bg-[radial-gradient(circle_at_50%_50%,rgba(255,234,252,0.35),transparent_60%)] blur-2xl" />
               <img
-                src="/logo.png"
-                alt="Beloni"
-                className="relative w-[220px] sm:w-[360px] lg:w-[430px] h-auto drop-shadow-[0_25px_45px_rgba(168,85,247,0.25)] select-none"
+                src="/psi-white-stroke.png"
+                alt="PSI"
+                className="relative w-[220px] sm:w-[360px] lg:w-[430px] h-auto drop-shadow-[0_25px_45px_rgba(34,65,95,0.30)] select-none"
                 draggable={false}
               />
             </div>
@@ -63,7 +63,7 @@ const Hero = () => {
               aria-hidden="true"
             />
             <div
-              className="absolute -inset-10 sm:-inset-12 bg-[radial-gradient(circle_at_50%_45%,rgba(168,85,247,0.22),transparent_60%)] blur-3xl pointer-events-none"
+              className="absolute -inset-10 sm:-inset-12 bg-[radial-gradient(circle_at_50%_45%,rgba(255,234,252,0.28),transparent_60%)] blur-3xl pointer-events-none"
               aria-hidden="true"
             />
             {/* Sombra no “chão” */}
@@ -74,18 +74,9 @@ const Hero = () => {
 
             <div className="relative mx-auto max-w-6xl">
               <img
-                src="/dash_mac.png"
-                alt="Preview do dashboard no notebook"
-                className="relative w-full h-auto block drop-shadow-[0_30px_70px_rgba(0,0,0,0.65)]"
-                draggable={false}
-                loading="lazy"
-              />
-
-              {/* Smartphone (no mobile fica abaixo; no desktop fica ao lado com sobreposição) */}
-              <img
-                src="/dash_iphone.png"
-                alt="Preview do dashboard no smartphone"
-                className="absolute bottom-[-4%] right-[-1%] w-32 sm:bottom-[-4%] sm:right-[-2%] sm:w-[210px] md:w-[250px] lg:w-[280px] h-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.75)]"
+                src="/model.png"
+                alt="Preview do sistema em notebook e celular"
+                className="relative w-full h-auto block lg:scale-110 lg:origin-center drop-shadow-[0_30px_70px_rgba(0,0,0,0.65)]"
                 draggable={false}
                 loading="lazy"
               />

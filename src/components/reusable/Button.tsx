@@ -20,10 +20,10 @@ const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
+    primary: 'bg-gradient-to-r from-[#104561] via-[#22415f] to-[#269ed0] text-white border border-[#ffeafc]/30 shadow-[0_10px_24px_rgba(16,69,97,0.45)] hover:brightness-105 focus:ring-[#269ed0]',
     secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
-    ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
+    outline: 'border-2 border-[#22415f] text-[#ffeafc] hover:bg-[#22415f] hover:text-white focus:ring-[#87868a]',
+    ghost: 'text-[#ffeafc] hover:bg-[#22415f]/20 focus:ring-[#87868a]'
   };
   
   const sizeClasses = {

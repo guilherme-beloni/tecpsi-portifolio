@@ -21,11 +21,36 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
+  const partners = [
+    { name: "HGS Sistemas", logo: "/parceiros/image1.jpeg" },
+    { name: "Vivotek", logo: "/parceiros/image3.jpeg" },
+    { name: "Volkswagen Financial Services", logo: "/parceiros/image4.png" },
+    { name: "Banco BV", logo: "/parceiros/image5.png" },
+    { name: "Accenture", logo: "/parceiros/image6.png" },
+    { name: "BMC", logo: "/parceiros/image7.png" },
+    { name: "Synchro", logo: "/parceiros/image9.png" },
+    { name: "SMSystem", logo: "/parceiros/image10.jpeg" },
+    { name: "HP", logo: "/parceiros/image13.png" },
+    { name: "CWS Tecnologia", logo: "/parceiros/image14.png" },
+    { name: "IBM", logo: "/parceiros/image15.png" },
+    { name: "TechX", logo: "/parceiros/image16.png" },
+    { name: "Grupo Athia", logo: "/parceiros/image17.png" },
+    { name: "Nova Rolamentos", logo: "/parceiros/image18.jpeg" },
+    { name: "Isapa", logo: "/parceiros/image20.png" },
+    { name: "Entelgy", logo: "/parceiros/image21.png" },
+    { name: "ConsulTI", logo: "/parceiros/image22.jpeg" },
+    { name: "Stefanini", logo: "/parceiros/image23.png" },
+    { name: "Arvore do Bem", logo: "/parceiros/image24.png" },
+    { name: "TOTVS", logo: "/parceiros/image26.jpeg" },
+    { name: "Vlab", logo: "/parceiros/image27.png" },
+    { name: "Engetex Inspecoes", logo: "/parceiros/image28.png" },
+  ];
+
   return (
     <section id="projects" className="relative py-20 bg-gray-900 overflow-hidden">
       {/* fundo sutil */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_30%,rgba(168,85,247,0.16),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_45%,rgba(99,102,241,0.14),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_30%,rgba(255,234,252,0.16),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_45%,rgba(34,65,95,0.28),transparent_55%)]" />
 
       <div className="relative container mx-auto px-6">
         <div
@@ -36,20 +61,18 @@ const Projects = () => {
         >
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-5 text-white">
-              Produtos & Serviços que{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-                vendem
+            Soluções em Dados que{" "}
+              <span className="bg-gradient-to-r from-[#ffeafc] to-[#87868a] bg-clip-text text-transparent">
+              estruturam
               </span>{" "}
               e{" "}
-              <span className="bg-gradient-to-r from-indigo-300 to-violet-400 bg-clip-text text-transparent">
-                organizam
+              <span className="bg-gradient-to-r from-[#87868a] to-[#ffeafc] bg-clip-text text-transparent">
+              impulsionam
               </span>{" "}
               seu negócio
             </h2>
             <p className="text-sm lg:text-xl text-white/70 max-w-4xl mx-auto">
-              Você não precisa de “mais um site”. Você precisa de um sistema que
-              gere demanda, automatize processos e ajude você a tomar decisões
-              com dados.
+              Você precisa de uma estrutura segura, performática e bem governada, que organize informações, reduza riscos e apoie decisões estratégicas com dados confiáveis.
             </p>
           </div>
 
@@ -57,7 +80,7 @@ const Projects = () => {
           <div className="grid lg:grid-cols-2 gap-6 mb-12">
             <div className="rounded-2xl border border-white/10 bg-gray-800/40 backdrop-blur-sm p-7">
               <div className="flex items-start gap-4">
-                <div className="h-11 w-11 rounded-xl bg-violet-500/15 border border-violet-400/20 flex items-center justify-center shrink-0">
+                <div className="h-11 w-11 rounded-xl bg-[#22415f]/40 border border-[#87868a]/35 flex items-center justify-center shrink-0">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -119,7 +142,7 @@ const Projects = () => {
 
             <div className="rounded-2xl border border-white/10 bg-gray-800/40 backdrop-blur-sm p-7">
               <div className="flex items-start gap-4">
-                <div className="h-11 w-11 rounded-xl bg-indigo-500/15 border border-indigo-400/20 flex items-center justify-center shrink-0">
+                <div className="h-11 w-11 rounded-xl bg-[#87868a]/30 border border-[#ffeafc]/20 flex items-center justify-center shrink-0">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -171,7 +194,7 @@ const Projects = () => {
                     ].map((item) => (
                       <span
                         key={item}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-violet-500/10 border border-violet-400/15 text-white/75"
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-[#22415f]/35 border border-[#87868a]/35 text-white/85"
                       >
                         {item}
                       </span>
@@ -186,8 +209,8 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Criação de sites e landing pages",
-                desc: "Páginas rápidas, bonitas e focadas em conversão, com SEO e performance desde a base.",
+                title: "Otimização de Performance e Tuning",
+                desc: "Análise e ajuste de queries, índices e recursos para máxima eficiência e redução de custos operacionais.",
                 icon: (
                   <svg
                     viewBox="0 0 24 24"
@@ -223,8 +246,8 @@ const Projects = () => {
                 ),
               },
               {
-                title: "Desenvolvimento de sistemas",
-                desc: "Sistemas sob medida para automatizar processos, reduzir retrabalho e aumentar eficiência.",
+                title: "Alta Disponibilidade e Disaster Recovery",
+                desc: "Implementação de clusters, replicações, backups e planos de contingência para garantir disponibilidade contínua.",
                 icon: (
                   <svg
                     viewBox="0 0 24 24"
@@ -254,8 +277,8 @@ const Projects = () => {
                 ),
               },
               {
-                title: "Programa de fidelidade",
-                desc: "Transforme clientes em recorrência com pontos, recompensas, campanhas e relatórios.",
+                title: "Governança e Segurança da Informação",
+                desc: "Controle de acessos, auditorias, políticas de segurança e conformidade para proteção estratégica dos dados.",
                 icon: (
                   <svg
                     viewBox="0 0 24 24"
@@ -290,8 +313,8 @@ const Projects = () => {
                 ),
               },
               {
-                title: "Controle de estoque e gestão financeira",
-                desc: "Entrada/saída, margem, fluxo de caixa, alertas e dashboards para decisões melhores.",
+                title: "Análise de Dados e Inteligência para Negócios",
+                desc: "Transformação de dados em informações estratégicas por meio de relatórios, dashboards e indicadores de performance.",
                 icon: (
                   <svg
                     viewBox="0 0 24 24"
@@ -328,8 +351,8 @@ const Projects = () => {
                 ),
               },
               {
-                title: "Aplicativos para celular",
-                desc: "Apps para Android/iOS para atendimento, pedidos, notificações e experiência premium.",
+                title: "Consultoria em Processos e Melhoria Contínua",
+                desc: "Diagnóstico técnico e otimização de fluxos operacionais, aumentando eficiência, confiabilidade e tomada de decisão baseada em dados.",
                 icon: (
                   <svg
                     viewBox="0 0 24 24"
@@ -359,8 +382,8 @@ const Projects = () => {
                 ),
               },
               {
-                title: "Design incluso no pacote",
-                desc: "Designer de banner e telas para sua marca parecer grande — antes mesmo do primeiro clique.",
+                title: "Migração e Modernização de Ambientes de Dados",
+                desc: "Planejamento e execução de migrações com mínima indisponibilidade, evolução tecnológica e ganho de performance em ambientes legados.",
                 icon: (
                   <svg
                     viewBox="0 0 24 24"
@@ -370,29 +393,16 @@ const Projects = () => {
                     aria-hidden="true"
                   >
                     <path
-                      d="M4 20.5c0-5.8 4.7-10.5 10.5-10.5H20"
+                      d="M4 6.5C4 5.12 5.12 4 6.5 4h11C18.88 4 20 5.12 20 6.5v11c0 1.38-1.12 2.5-2.5 2.5h-11C5.12 20 4 18.88 4 17.5v-11Z"
                       stroke="currentColor"
                       strokeWidth="1.8"
-                      strokeLinecap="round"
                     />
                     <path
-                      d="M14.5 10 19 5.5c.83-.83.83-2.17 0-3-.83-.83-2.17-.83-3 0L11.5 7"
+                      d="M8 12h8M13 8l3 4-3 4"
                       stroke="currentColor"
                       strokeWidth="1.8"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9.2 8.8 15.2 14.8"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M6.5 21h10"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
                     />
                   </svg>
                 ),
@@ -407,7 +417,7 @@ const Projects = () => {
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-violet-300 transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-white group-hover:text-[#ffeafc] transition-colors duration-300">
                       {service.title}
                     </h3>
                     <p className="mt-2 text-sm text-white/70 leading-relaxed">
@@ -419,128 +429,44 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Amostras (preview + saiba mais) */}
+          {/* Parceiros atendidos */}
           <div className="mt-14">
             <div className="text-center mb-8">
               <h3 className="text-3xl md:text-4xl font-extrabold text-white">
-                Amostras em produção
+              Empresas que confiaram em nossa atuação
               </h3>
               <p className="mt-3 text-white/70 max-w-3xl mx-auto">
-                Alguns projetos reais para você visualizar o padrão de UI,
-                performance e acabamento.
+              Organizações e operações que confiaram em nossa expertise para fortalecer seus ambientes de dados e processos críticos.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "DChef",
-                  url: "https://www.dchef.com.br",
-                  subtitle: "Site institucional + presença digital",
-                },
-                {
-                  title: "Dr. Matheus Kasai",
-                  url: "https://www.drmatheuskasai.com",
-                  subtitle: "Site profissional focado em conversão",
-                },
-                {
-                  title: "Club+ (App)",
-                  url: "https://clubmais.app",
-                  subtitle: "Plataforma / app com experiência premium",
-                },
-              ].map((sample) => {
-                // Preview sem marca d’água (screenshot automático)
-                // OBS: o thum.io espera a URL "crua" no path (não encodeURIComponent)
-                const screenshotUrl = `https://image.thum.io/get/width/1400/${sample.url}`;
-
-                return (
-                  <div
-                    key={sample.url}
-                    className="group rounded-2xl border border-white/10 bg-gray-800/35 backdrop-blur-sm overflow-hidden hover:bg-gray-800/45 transition-colors duration-300"
-                  >
-                    {/* Preview */}
-                    <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-white/5 to-white/0">
-                      {/* Placeholder discreto (se o screenshot falhar) */}
-                      <div
-                        className="absolute inset-0 flex items-center justify-center p-6 pointer-events-none"
-                        aria-hidden="true"
-                      >
-                        <div className="w-[72%] max-w-xs">
-                          <div className="h-3 rounded bg-white/10" />
-                          <div className="mt-3 h-3 rounded bg-white/10 w-4/5" />
-                          <div className="mt-6 h-24 rounded-xl bg-white/5 border border-white/10" />
-                        </div>
-                      </div>
-
-                      <img
-                        src={screenshotUrl}
-                        alt={`Pré-visualização de ${sample.title}`}
-                        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                        loading="lazy"
-                        onError={(e) => {
-                          const el = e.currentTarget as HTMLImageElement;
-                          el.style.display = "none";
-                        }}
-                      />
-
-                      {/* Overlay hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="absolute inset-0 flex items-end justify-between gap-3 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div>
-                          <div className="text-sm font-bold text-white">
-                            {sample.title}
-                          </div>
-                        </div>
-                      
-                      </div>
-                    </div>
-
-                    {/* Conteúdo */}
-                    <div className="p-6">
-                      <div className="flex items-start justify-between gap-4">
-                        <div>
-                          <h4 className="text-lg font-bold text-white">
-                            {sample.title}
-                          </h4>
-                          <p className="mt-1 text-sm text-white/70">
-                            {sample.subtitle}
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="mt-4 flex items-center justify-between gap-3">
-                        <a
-                          href={sample.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm font-semibold text-violet-300 hover:text-violet-200 transition-colors"
-                        >
-                          {new URL(sample.url).host}
-                        </a>
-                        <a
-                          href={sample.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white transition-colors"
-                        >
-                          <span>Visite o site</span>
-                          <span className="text-white/60">→</span>
-                        </a>
-                      </div>
-                    </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+              {partners.map((partner) => (
+                <div
+                  key={partner.name}
+                  className="group rounded-2xl border border-[#87868a]/35 bg-gray-800/35 backdrop-blur-sm p-4 sm:p-5 hover:bg-gray-800/45 transition-colors duration-300"
+                >
+                  <div className="h-20 sm:h-24 rounded-xl bg-white/95 flex items-center justify-center p-3">
+                    <img
+                      src={partner.logo}
+                      alt={`Logo ${partner.name}`}
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                      draggable={false}
+                    />
                   </div>
-                );
-              })}
+                  <p className="mt-3 text-center text-sm font-semibold text-white/85 group-hover:text-[#ffeafc] transition-colors">
+                    {partner.name}
+                  </p>
+                </div>
+              ))}
             </div>
 
-            <div className="mt-6 text-center text-xs text-white/45">
-              *As pré-visualizações são capturadas automaticamente e podem levar
-              alguns segundos para atualizar.
-            </div>
+           
           </div>
 
           {/* CTA */}
-          <div className="mt-12 rounded-2xl border border-white/10 bg-gradient-to-r from-violet-500/10 to-indigo-500/10 p-6 sm:p-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6">
+          <div className="mt-12 rounded-2xl border border-[#87868a]/35 bg-gradient-to-r from-[#22415f]/25 to-[#87868a]/20 p-6 sm:p-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6">
             <div className="text-center lg:text-left">
               <h3 className="text-xl sm:text-2xl font-extrabold text-white">
                 Vamos montar a solução ideal para o seu negócio?
@@ -554,13 +480,13 @@ const Projects = () => {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-end">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center h-11 px-5 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold shadow-lg shadow-violet-600/20 hover:brightness-110 transition w-full sm:w-auto"
+                className="btn-primary inline-flex items-center justify-center h-11 px-5 rounded-lg font-semibold transition w-full sm:w-auto"
               >
                 Pedir orçamento
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center h-11 px-5 rounded-lg border border-white/20 bg-white/5 text-white/90 font-semibold hover:bg-white/10 transition w-full sm:w-auto"
+                className="btn-secondary inline-flex items-center justify-center h-11 px-5 rounded-lg font-semibold transition w-full sm:w-auto"
               >
                 Tirar dúvidas
               </a>

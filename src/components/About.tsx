@@ -22,12 +22,15 @@ const About = () => {
   }, []);
 
   const skills = [
-    { name: "React / Next.js", level: 90 },
-    { name: "TypeScript / JavaScript", level: 99 },
-    { name: "Node.js / Golang", level: 80 },
-    { name: "Tailwind CSS / Framer Motion", level: 95 },
-    { name: "PostgreSQL / MongoDB / Redis", level: 70 },
-    { name: "Docker / CI/CD / Cloud", level: 85 },
+    { name: "Administração de Banco de Dados (Oracle / SQL Server / PostgreSQL)", level: 99 },
+   
+    { name: "Performance Tuning e Otimização de Queries", level: 99 },
+ 
+    { name: "Modelagem de Dados e Arquitetura de Banco", level: 95 },
+    { name: "Segurança de Dados e Hardening", level: 97 },
+    { name: "Automação com Shell Script / PowerShell / Python", level: 90 },
+    { name: "Ambientes Cloud (AWS RDS, Azure SQL, Google Cloud SQL)", level: 92 },
+    { name: "Monitoramento e Troubleshooting Avançado", level: 98 },
   ];
 
   return (
@@ -45,14 +48,10 @@ const About = () => {
             </h2>
 
             <p className="text-sm text-left lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
-              Somos especialistas em desenvolvimento full stack com foco em
-              entregar soluções digitais robustas, escaláveis e alinhadas aos
-              objetivos estratégicos de cada cliente.
+            Somos especialistas em gestão e arquitetura de dados, com foco em entregar ambientes robustos, seguros e escaláveis, alinhados aos objetivos estratégicos de cada organização.
             </p>
             <p className="text-sm text-left lg:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Com mais de 5 anos de atuação, ajudamos empresas a transformar
-              ideias em produtos digitais de alto impacto — da interface ao
-              backend, da prototipação ao deploy.
+            Com ampla experiência de mercado, apoiamos empresas na estruturação, otimização e governança de seus bancos de dados — da modelagem à alta disponibilidade, da performance à continuidade do negócio.
             </p>
           </div>
 
@@ -60,43 +59,39 @@ const About = () => {
             {/* Informações pessoais */}
             <div className="space-y-6">
               <div className="bg-gray-700/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-600/50">
-                <div className="w-30 h-30 mx-auto mb-6 rounded-full overflow-hidden border border-white/10 shadow-lg shadow-black/30">
+                <div className="w-30 h-30 mx-auto mb-6 rounded-full overflow-hidden border border-[#269ed0]/35 shadow-lg shadow-[#104561]/35 bg-gradient-to-br from-[#104561]/55 via-[#22415f]/45 to-[#269ed0]/35">
                   <img
-                    src="/gui.jpeg"
-                    alt="Guilherme Beloni"
-                    className="w-full h-full object-cover object-center"
+                    src="/psi-symbol-grey.png"
+                    alt="Equipe PSI"
+                    className="w-full h-full object-contain object-center p-2"
                     draggable={false}
                     loading="lazy"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-2">
-                  Guilherme Beloni
+                  Equipe PSI
                 </h3>
-                <p className="text-lg font-semibold text-center mb-4 text-blue-400">
-                  Tech Lead & Full Stack Developer
+                <p className="text-lg font-semibold text-center mb-4 text-[#ffeafc]">
+                DBA & Analista de Dados Sênior
                 </p>
                 <p className="text-gray-300  text-sm lg:text-xl leading-relaxed">
-                  Atuamos liderando e executando projetos de alto nível com foco
-                  em performance, usabilidade e escalabilidade. Trabalho com
-                  tecnologias modernas como React, TypeScript, Node.js e
-                  infraestrutura em nuvem. "Visão de negócio, responsabilidade
-                  técnica e compromisso com entregas de excelência."
+                Atuamos na gestão estratégica de dados com foco em performance, segurança e alta disponibilidade. Trabalhamos com administração e arquitetura de bancos de dados, otimização de consultas e ambientes críticos. Visão analítica, responsabilidade técnica e compromisso com excelência operacional.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-r from-blue-500/10 to-violet-500/10 p-6 rounded-xl border border-blue-500/20">
-                <h4 className="text-lg font-semibold mb-4 text-blue-400 text-center">
+              <div className="bg-gradient-to-r from-[#22415f]/25 to-[#87868a]/25 p-6 rounded-xl border border-[#87868a]/35">
+                <h4 className="text-lg font-semibold mb-4 text-[#ffeafc] text-center">
                   Números que representam minha experiência
                 </h4>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-gray-700/30 p-4 rounded-lg text-left">
-                    <div className="text-2xl font-bold text-blue-400">5+</div>
+                    <div className="text-2xl font-bold text-[#ffeafc]">5+</div>
                     <div className="text-sm text-gray-400">
                       anos de atuação no mercado
                     </div>
                   </div>
                   <div className="bg-gray-700/30 p-4 rounded-lg text-left">
-                    <div className="text-2xl font-bold text-violet-400">
+                    <div className="text-2xl font-bold text-[#ffeafc]">
                       20+
                     </div>
                     <div className="text-sm text-gray-400">
@@ -104,7 +99,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="bg-gray-700/30 p-4 rounded-lg text-left">
-                    <div className="text-2xl font-bold text-purple-400">
+                    <div className="text-2xl font-bold text-[#ffeafc]">
                       100%
                     </div>
                     <div className="text-sm text-gray-400">
@@ -120,7 +115,7 @@ const About = () => {
               <h3 className="text-2xl font-bold mb-6">
                 Tecnologias & Especialidades
               </h3>
-              <h4 className="text-xl font-semibold mb-4 text-blue-400">
+              <h4 className="text-xl font-semibold mb-4 text-[#ffeafc]">
                 Stack Principal
               </h4>
               <div className="space-y-4">
@@ -130,13 +125,13 @@ const About = () => {
                       <span className="text-gray-300 font-medium">
                         {skill.name}
                       </span>
-                      <span className="text-blue-400 font-semibold">
+                      <span className="text-[#ffeafc] font-semibold">
                         {skill.level}%
                       </span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-violet-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-[#22415f] to-[#87868a] h-2 rounded-full transition-all duration-1000 ease-out"
                         style={{
                           width: isVisible ? `${skill.level}%` : "0%",
                           transitionDelay: `${index * 100}ms`,
@@ -147,21 +142,21 @@ const About = () => {
                 ))}
               </div>
 
-              <div className="mt-8 p-6 bg-gradient-to-r from-blue-500/10 to-violet-500/10 rounded-xl border border-blue-500/20">
-                <h4 className="text-lg font-semibold mb-3 text-blue-400">
+              <div className="mt-8 p-6 bg-gradient-to-r from-[#22415f]/25 to-[#87868a]/25 rounded-xl border border-[#87868a]/35">
+                <h4 className="text-lg font-semibold mb-3 text-[#ffeafc]">
                   Áreas de Atuação
                 </h4>
                 <div className="space-y-3">
                   {[
-                    "Desenvolvimento Web Full Stack",
+                    "Analista de Dados",
                     "Sistemas sob demanda",
-                    "Integrações com APIs e automações",
-                    "Aplicações mobile com React Native",
-                    "UI/UX orientado à performance",
-                    "Deploy, monitoramento e escalabilidade em nuvem",
+                    "Consultor de Processos",
+                    "Consultor em Otimização e Melhoria Contínua",
+                    "Atuação Estratégica Técnica",
+                    
                   ].map((area) => (
                     <div key={area} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-[#ffeafc] rounded-full"></div>
                       <span className="text-gray-300 text-sm">{area}</span>
                     </div>
                   ))}
