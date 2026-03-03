@@ -85,14 +85,14 @@ const About = () => {
                 </h4>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-gray-700/30 p-4 rounded-lg text-left">
-                    <div className="text-2xl font-bold text-[#ffeafc]">5+</div>
+                    <div className="text-2xl font-bold text-[#ffeafc]">20+</div>
                     <div className="text-sm text-gray-400">
                       anos de atuação no mercado
                     </div>
                   </div>
                   <div className="bg-gray-700/30 p-4 rounded-lg text-left">
                     <div className="text-2xl font-bold text-[#ffeafc]">
-                      20+
+                      330+
                     </div>
                     <div className="text-sm text-gray-400">
                       projetos entregues com sucesso

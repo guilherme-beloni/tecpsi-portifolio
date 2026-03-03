@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { BadgeCheck } from "lucide-react";
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -179,12 +180,12 @@ const Contact = () => {
                       Equipe PSI
                     </h3>
                     <p className="mt-1 text-sm sm:text-base text-white/70 font-semibold">
-                      Tech Lead & Full Stack Developer
+                    DBA & Analista de Dados Sênior
                     </p>
                   </div>
 
                   <div className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                    <span className="text-2xl">💬</span>
+                    <BadgeCheck className="w-6 h-6 text-[#ffeafc]" aria-hidden="true" />
                   </div>
                 </div>
 
