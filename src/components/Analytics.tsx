@@ -20,7 +20,7 @@ export default function Analytics() {
       if (!href) return
 
       // WhatsApp
-      if (href.includes('wa.me/5518996809368')) {
+      if (href.includes('wa.me/5518996570715')) {
         trackEvent('whatsapp_click', { href, location: window.location.pathname })
         return
       }

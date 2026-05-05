@@ -7,7 +7,7 @@
 
 export const EMAIL_CONFIG = {
   API_KEY: 're_Cqy7cj2M_PLUEVS5zGy5SqJtZv5m7oDPi', // Sua API Key do Resend
-  TO_EMAIL: 'adsguilhermezb@gmail.com',
+  TO_EMAIL: 'fernando@tecpsi.com.br',
   FROM_EMAIL: 'Acme <onboarding@resend.dev>' // Formato recomendado pelo Resend
 }
 

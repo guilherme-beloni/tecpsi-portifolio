@@ -27,6 +27,19 @@ const Footer = () => {
               sites, sistemas e apps sob medida para negócios reais.
             </p>
 
+            <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4 max-w-md mx-auto md:mx-0">
+              <p className="text-sm font-semibold text-white/90">
+                Performance System
+              </p>
+              <p className="mt-1 text-xs text-white/70">
+                CNPJ: 14.499.139/0001-36
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-white/60">
+                Endereço: R MARIA CATHARINA CHIONHA GIABARDO, 381, Presidente
+                Prudente, SP, BRASIL
+              </p>
+            </div>
+
             {/* Sociais */}
             <div className="mt-5 flex justify-center md:justify-start gap-3">
               {[
@@ -103,7 +116,7 @@ const Footer = () => {
             <div className="text-sm font-bold text-white">Contato direto</div>
             <div className="mt-4 space-y-3 text-sm">
               <a
-                href={`https://wa.me/5518996809368?text=${encodeURIComponent(
+                href={`https://wa.me/5518996570715?text=${encodeURIComponent(
                   "Olá, vim pelo site e preciso de um orçamento!",
                 )}`}
                 target="_blank"

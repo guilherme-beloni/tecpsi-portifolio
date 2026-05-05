@@ -9,7 +9,7 @@ export const EMAILJS_CONFIG = {
   SERVICE_ID: 'service_bc6o5f8', // Service ID configurado
   TEMPLATE_ID: 'template_7mrbdsq', // Template ID configurado
   PUBLIC_KEY: 'gzBbW7-c2KbxzgaGR', // Public Key configurada
-  TO_EMAIL: 'adsguilhermezb@gmail.com'
+  TO_EMAIL: 'fernando@tecpsi.com.br'
 }
 
 export interface EmailData {
