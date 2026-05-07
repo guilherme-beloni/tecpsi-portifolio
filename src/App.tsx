@@ -54,7 +54,7 @@ function App() {
 
       {/* Botão flutuante (WhatsApp) */}
       <a
-        href={`https://wa.me/5518996570715?text=${encodeURIComponent(
+        href={`https://wa.me/554491750947?text=${encodeURIComponent(
           "Olá, vim pelo site e preciso de um orçamento!",
         )}`}
         target="_blank"

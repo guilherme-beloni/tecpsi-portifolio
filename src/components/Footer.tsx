@@ -1,3 +1,4 @@
+import { Mail, MessageCircle } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -27,17 +28,24 @@ const Footer = () => {
               sites, sistemas e apps sob medida para negócios reais.
             </p>
 
-            <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4 max-w-md mx-auto md:mx-0">
-              <p className="text-sm font-semibold text-white/90">
-                Performance System
-              </p>
-              <p className="mt-1 text-xs text-white/70">
-                CNPJ: 14.499.139/0001-36
-              </p>
-              <p className="mt-2 text-xs leading-relaxed text-white/60">
-                Endereço: R MARIA CATHARINA CHIONHA GIABARDO, 381, Presidente
-                Prudente, SP, BRASIL
-              </p>
+            <div className="mt-5 max-w-md mx-auto md:mx-0 overflow-hidden ">
+              <div className="border-b border-white/10 px-4 py-3">
+                <p className="text-sm font-semibold tracking-wide text-white">
+                  Performance System
+                </p>
+              </div>
+
+              <div className="space-y-3 px-4 py-4">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-[11px] uppercase tracking-wider text-white/45">
+                    CNPJ
+                  </span>
+
+                  <span className="text-sm font-medium text-white/80">
+                    14.499.139/0001-36
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Sociais */}
@@ -114,29 +122,35 @@ const Footer = () => {
           {/* Contato */}
           <div className="md:col-span-4">
             <div className="text-sm font-bold text-white">Contato direto</div>
-            <div className="mt-4 space-y-3 text-sm">
+            <div className="mt-4 flex flex-col gap-3 text-sm">
               <a
-                href={`https://wa.me/5518996570715?text=${encodeURIComponent(
+                href={`https://wa.me/554491750947?text=${encodeURIComponent(
                   "Olá, vim pelo site e preciso de um orçamento!",
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+                className="inline-flex w-fit items-center gap-2 text-white/70 hover:text-white transition-colors"
               >
-                <span className="text-white/50">WhatsApp:</span>
+                <MessageCircle size={16} className="text-white" />
+
                 <span className="font-semibold text-white/85">
-                 +55 (18) 99657-0715
+                  (44) 9175-0947
                 </span>
               </a>
+
               <a
                 href="mailto:fernando@tecpsi.com.br"
-                className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 text-white/70 hover:text-white transition-colors"
               >
-                <span className="text-white/50">Email:</span>
+                <Mail size={16} className="text-sell-orange" />
+
                 <span className="font-semibold text-white/85">
-                fernando@tecpsi.com.br
+                  suporte@tecpsi.com.br
                 </span>
               </a>
+
               <div className="pt-2">
                 <a
                   href="#contact"
