@@ -41,8 +41,6 @@ const Projects = () => {
     { name: "ConsulTI", logo: "/parceiros/image22.jpeg" },
     { name: "Stefanini", logo: "/parceiros/image23.png" },
     { name: "Arvore do Bem", logo: "/parceiros/image24.png" },
-    { name: "TOTVS", logo: "/parceiros/image26.jpeg" },
-    { name: "Vlab", logo: "/parceiros/image27.png" },
     { name: "Engetex Inspecoes", logo: "/parceiros/image28.png" },
   ];
 
